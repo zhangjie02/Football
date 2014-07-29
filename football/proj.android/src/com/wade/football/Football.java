@@ -35,6 +35,7 @@ import android.widget.FrameLayout;
 
 import com.bodong.dianjinweb.DianJinPlatform;
 import com.bodong.dianjinweb.banner.DianJinBanner;
+import com.example.dianjinwebnoreward.MainActivity;
 
 public class Football extends Cocos2dxActivity {
 
@@ -57,6 +58,7 @@ public class Football extends Cocos2dxActivity {
 		DianJinBanner adView = new DianJinBanner(this);
 		this.addContentView(adView, layoutParams);
 		adView.startBanner();
+		DianJinPlatform.hideFloatView(this);
 	}
 
 //	/**
@@ -244,10 +246,10 @@ public class Football extends Cocos2dxActivity {
 		System.loadLibrary("game");
 	}
 
-//	protected void onDestroy() {
-//		SpotManager.getInstance(this).unregisterSceenReceiver();
-//		super.onDestroy();
-//	}
+	protected void onDestroy() {
+		DianJinPlatform.destory(instance);
+		super.onDestroy();
+	}
 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		// 如果是返回键,直接返回到桌面
