@@ -26,12 +26,15 @@ package com.wade.football;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.utils.PSNetwork;
 
-import com.bodong.dianjinweb.DianJinPlatform;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.KeyEvent;
+import android.widget.FrameLayout;
+
+import com.bodong.dianjinweb.DianJinPlatform;
+import com.bodong.dianjinweb.banner.DianJinBanner;
 
 public class Football extends Cocos2dxActivity {
 
@@ -43,8 +46,17 @@ public class Football extends Cocos2dxActivity {
 		instance = this;
 		PSNetwork.init(instance);
 		
-		DianJinPlatform.initialize(this, 27757,
-				"d22e2399cf41ced05fef177de5e443e7", 1001);
+		DianJinPlatform.initialize(this, 54271,
+				"c4ec6d364dc6d169a8abc9cdac1d7c3e", 1001);
+		
+		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
+				FrameLayout.LayoutParams.MATCH_PARENT,
+				FrameLayout.LayoutParams.WRAP_CONTENT);
+		layoutParams.gravity = Gravity.TOP;
+//		AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+		DianJinBanner adView = new DianJinBanner(this);
+		this.addContentView(adView, layoutParams);
+		adView.startBanner();
 	}
 
 //	/**
@@ -262,6 +274,7 @@ public class Football extends Cocos2dxActivity {
 							}).show();
 		}
 		// SpotManager.getInstance(this).showSpotAds(this);
+		DianJinPlatform.showOfferWall(instance);
 		return super.onKeyDown(keyCode, event);
 	}
 }
