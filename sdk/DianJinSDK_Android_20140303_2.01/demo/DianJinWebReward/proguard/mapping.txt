@@ -1,0 +1,3211 @@
+android.support.v4.app.ActivityCompatHoneycomb -> android.support.v4.app.a:
+    void invalidateOptionsMenu(android.app.Activity) -> a
+android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump(java.lang.String,java.io.PrintWriter,boolean) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    void bumpBackStackNesting(int) -> a
+    int commit() -> a
+    int commitInternal(boolean) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> b
+    java.lang.String getName() -> b
+android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> P
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    android.support.v4.app.FragmentManagerImpl mChildFragmentManager -> u
+    android.support.v4.app.Fragment mParentFragment -> v
+    int mFragmentId -> w
+    int mContainerId -> x
+    java.lang.String mTag -> y
+    boolean mHidden -> z
+    boolean mDetached -> A
+    boolean mRetainInstance -> B
+    boolean mRetaining -> C
+    boolean mHasMenu -> D
+    boolean mMenuVisible -> E
+    boolean mCalled -> F
+    int mNextAnim -> G
+    android.view.ViewGroup mContainer -> H
+    android.view.View mView -> I
+    android.view.View mInnerView -> J
+    boolean mDeferStart -> K
+    boolean mUserVisibleHint -> L
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> M
+    boolean mLoadersStarted -> N
+    boolean mCheckedForLoaderManager -> O
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState(android.os.Bundle) -> a
+    void setIndex(int,android.support.v4.app.Fragment) -> a
+    boolean isInBackStack() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> b
+    android.content.res.Resources getResources() -> c
+    boolean isDetached() -> d
+    void onHiddenChanged(boolean) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> c
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    void onActivityCreated(android.os.Bundle) -> d
+    void onViewStateRestored(android.os.Bundle) -> e
+    void onStart() -> e
+    void onResume() -> f
+    void onSaveInstanceState(android.os.Bundle) -> f
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> g
+    void onStop() -> h
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> i
+    void onDestroy() -> j
+    void initState() -> k
+    void onDetach() -> l
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu(android.view.Menu) -> a
+    void onDestroyOptionsMenu() -> m
+    boolean onOptionsItemSelected(android.view.MenuItem) -> a
+    void onOptionsMenuClosed(android.view.Menu) -> b
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void instantiateChildFragmentManager() -> n
+    void performCreate(android.os.Bundle) -> g
+    android.view.View performCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> b
+    void performActivityCreated(android.os.Bundle) -> h
+    void performStart() -> o
+    void performResume() -> p
+    void performConfigurationChanged(android.content.res.Configuration) -> a
+    void performLowMemory() -> q
+    boolean performCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> b
+    boolean performPrepareOptionsMenu(android.view.Menu) -> c
+    boolean performOptionsItemSelected(android.view.MenuItem) -> c
+    boolean performContextItemSelected(android.view.MenuItem) -> d
+    void performOptionsMenuClosed(android.view.Menu) -> d
+    void performSaveInstanceState(android.os.Bundle) -> i
+    void performPause() -> r
+    void performStop() -> s
+    void performReallyStop() -> t
+    void performDestroyView() -> u
+    void performDestroy() -> v
+android.support.v4.app.Fragment$1 -> android.support.v4.app.e:
+    android.support.v4.app.Fragment this$0 -> a
+    android.view.View findViewById(int) -> a
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.f:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.g:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.h:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    android.support.v4.app.FragmentContainer mContainer -> c
+    boolean mCreated -> d
+    boolean mResumed -> e
+    boolean mStopped -> f
+    boolean mReallyStopped -> g
+    boolean mRetaining -> h
+    boolean mOptionsMenuInvalidated -> i
+    boolean mCheckedForLoaderManager -> j
+    boolean mLoadersStarted -> k
+    java.util.HashMap mAllLoaderManagers -> l
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> m
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
+    void supportInvalidateOptionsMenu() -> c
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    java.lang.String viewToString(android.view.View) -> a
+    void dumpViewHierarchy(java.lang.String,java.io.PrintWriter,android.view.View) -> a
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> d
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragment(java.lang.String) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(java.lang.String,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.i:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.j:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    java.util.HashMap children -> c
+    java.util.ArrayList fragments -> d
+    java.util.HashMap loaders -> e
+android.support.v4.app.FragmentContainer -> android.support.v4.app.k:
+    android.view.View findViewById(int) -> a
+android.support.v4.app.FragmentManager -> android.support.v4.app.l:
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.m:
+    void onBackStackChanged() -> a
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.n:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    android.support.v4.app.FragmentContainer mContainer -> p
+    android.support.v4.app.Fragment mParent -> q
+    boolean mNeedMenuInvalidate -> r
+    boolean mStateSaved -> s
+    boolean mDestroyed -> t
+    java.lang.String mNoTransactionsBecause -> u
+    boolean mHavePendingDeferredStart -> v
+    android.os.Bundle mStateBundle -> w
+    android.util.SparseArray mStateArray -> x
+    java.lang.Runnable mExecCommit -> y
+    android.view.animation.Interpolator DECELERATE_QUINT -> z
+    android.view.animation.Interpolator DECELERATE_CUBIC -> A
+    android.view.animation.Interpolator ACCELERATE_QUINT -> B
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> C
+    void throwException(java.lang.RuntimeException) -> a
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    boolean popBackStackImmediate() -> c
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> d
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> t
+    void enqueueAction(java.lang.Runnable,boolean) -> a
+    int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> e
+    void reportBackStackChanged() -> f
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> b
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> g
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> h
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity,android.support.v4.app.FragmentContainer,android.support.v4.app.Fragment) -> a
+    void noteStateNotSaved() -> i
+    void dispatchCreate() -> j
+    void dispatchActivityCreated() -> k
+    void dispatchStart() -> l
+    void dispatchResume() -> m
+    void dispatchPause() -> n
+    void dispatchStop() -> o
+    void dispatchReallyStop() -> p
+    void dispatchDestroyView() -> q
+    void dispatchDestroy() -> r
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> s
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.o:
+    android.support.v4.app.FragmentManagerImpl this$0 -> a
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.p:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.q:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity,android.support.v4.app.Fragment) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.r:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost -> android.support.v4.app.FragmentTabHost:
+    java.util.ArrayList mTabs -> a
+    android.content.Context mContext -> b
+    android.support.v4.app.FragmentManager mFragmentManager -> c
+    int mContainerId -> d
+    android.widget.TabHost$OnTabChangeListener mOnTabChangeListener -> e
+    android.support.v4.app.FragmentTabHost$TabInfo mLastTab -> f
+    boolean mAttached -> g
+    void setup() -> setup
+    void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener) -> setOnTabChangedListener
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void onTabChanged(java.lang.String) -> onTabChanged
+    android.support.v4.app.FragmentTransaction doTabChanged(java.lang.String,android.support.v4.app.FragmentTransaction) -> a
+android.support.v4.app.FragmentTabHost$1 -> android.support.v4.app.s:
+android.support.v4.app.FragmentTabHost$SavedState -> android.support.v4.app.FragmentTabHost$SavedState:
+    java.lang.String curTab -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.app.FragmentTabHost$SavedState$1 -> android.support.v4.app.t:
+    android.support.v4.app.FragmentTabHost$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentTabHost$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.u:
+    java.lang.String tag -> a
+    java.lang.Class clss -> b
+    android.os.Bundle args -> c
+    android.support.v4.app.Fragment fragment -> d
+    android.support.v4.app.Fragment access$102(android.support.v4.app.FragmentTabHost$TabInfo,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment access$100(android.support.v4.app.FragmentTabHost$TabInfo) -> a
+    java.lang.String access$200(android.support.v4.app.FragmentTabHost$TabInfo) -> b
+    java.lang.Class access$300(android.support.v4.app.FragmentTabHost$TabInfo) -> c
+    android.os.Bundle access$400(android.support.v4.app.FragmentTabHost$TabInfo) -> d
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.v:
+    android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
+    android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
+    int commit() -> a
+android.support.v4.app.LoaderManager -> android.support.v4.app.w:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.x:
+    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
+    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    void onLoaderReset(android.support.v4.content.Loader) -> a
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
+    boolean DEBUG -> a
+    android.support.v4.util.SparseArrayCompat mLoaders -> b
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
+    java.lang.String mWho -> d
+    android.support.v4.app.FragmentActivity mActivity -> e
+    boolean mStarted -> f
+    boolean mRetaining -> g
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.aa:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ab:
+android.support.v4.content.Loader -> android.support.v4.a.a:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void onStartLoading() -> b
+    void stopLoading() -> c
+    void onStopLoading() -> d
+    void reset() -> e
+    void onReset() -> f
+    java.lang.String dataToString(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> android.support.v4.b.e:
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.util.DebugUtils -> android.support.v4.c.a:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> android.support.v4.c.b:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.SparseArrayCompat -> android.support.v4.c.c:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    void gc() -> c
+    int size() -> a
+    int keyAt(int) -> a
+    java.lang.Object valueAt(int) -> b
+    void clear() -> b
+    int idealByteArraySize(int) -> c
+    int idealIntArraySize(int) -> d
+android.support.v4.view.GravityCompat -> android.support.v4.view.a:
+    android.support.v4.view.GravityCompat$GravityCompatImpl IMPL -> a
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImpl -> android.support.v4.view.b:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImplBase -> android.support.v4.view.c:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompat$GravityCompatImplJellybeanMr1 -> android.support.v4.view.d:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.GravityCompatJellybeanMr1 -> android.support.v4.view.e:
+    int getAbsoluteGravity(int,int) -> a
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.f:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+    void startTracking(android.view.KeyEvent) -> b
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.g:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$EclairKeyEventVersionImpl -> android.support.v4.view.h:
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.i:
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.j:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompatEclair -> android.support.v4.view.k:
+    void startTracking(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompatHoneycomb -> android.support.v4.view.l:
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.m:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionMasked(android.view.MotionEvent) -> a
+    int getActionIndex(android.view.MotionEvent) -> b
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> c
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.n:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.o:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.support.v4.view.p:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.MotionEventCompatEclair -> android.support.v4.view.q:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+    int getPointerCount(android.view.MotionEvent) -> a
+android.support.v4.view.PagerAdapter -> android.support.v4.view.r:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void startUpdate(android.view.ViewGroup) -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
+    void finishUpdate(android.view.ViewGroup) -> b
+    void startUpdate(android.view.View) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
+    void finishUpdate(android.view.View) -> b
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+    float getPageWidth(int) -> a
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.s:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.t:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.u:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.v:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.w:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+    float getYVelocity(android.view.VelocityTracker,int) -> b
+android.support.v4.view.ViewCompat -> android.support.v4.view.x:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.y:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.z:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> android.support.v4.view.aa:
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.ab:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> android.support.v4.view.ac:
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl -> android.support.v4.view.ad:
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.ae:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> c
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> d
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.af:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatHC -> android.support.v4.view.ag:
+    long getFrameTime() -> a
+    void setLayerType(android.view.View,int,android.graphics.Paint) -> a
+    int getLayerType(android.view.View) -> a
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.ah:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+android.support.v4.view.ViewCompatJB -> android.support.v4.view.ai:
+    void postInvalidateOnAnimation(android.view.View) -> a
+    void postInvalidateOnAnimation(android.view.View,int,int,int,int) -> a
+    void postOnAnimation(android.view.View,java.lang.Runnable) -> a
+android.support.v4.view.ViewCompatJellybeanMr1 -> android.support.v4.view.aj:
+    void setLayerPaint(android.view.View,android.graphics.Paint) -> a
+    int getLayoutDirection(android.view.View) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    int mExpectedAdapterCount -> b
+    java.util.Comparator COMPARATOR -> c
+    android.view.animation.Interpolator sInterpolator -> d
+    java.util.ArrayList mItems -> e
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> f
+    android.graphics.Rect mTempRect -> g
+    android.support.v4.view.PagerAdapter mAdapter -> h
+    int mCurItem -> i
+    int mRestoredCurItem -> j
+    android.os.Parcelable mRestoredAdapterState -> k
+    java.lang.ClassLoader mRestoredClassLoader -> l
+    android.widget.Scroller mScroller -> m
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> n
+    int mPageMargin -> o
+    android.graphics.drawable.Drawable mMarginDrawable -> p
+    int mTopPageBounds -> q
+    int mBottomPageBounds -> r
+    float mFirstOffset -> s
+    float mLastOffset -> t
+    int mChildWidthMeasureSpec -> u
+    int mChildHeightMeasureSpec -> v
+    boolean mInLayout -> w
+    boolean mScrollingCacheEnabled -> x
+    boolean mPopulatePending -> y
+    int mOffscreenPageLimit -> z
+    boolean mIsBeingDragged -> A
+    boolean mIsUnableToDrag -> B
+    int mDefaultGutterSize -> C
+    int mGutterSize -> D
+    int mTouchSlop -> E
+    float mLastMotionX -> F
+    float mLastMotionY -> G
+    float mInitialMotionX -> H
+    float mInitialMotionY -> I
+    int mActivePointerId -> J
+    android.view.VelocityTracker mVelocityTracker -> K
+    int mMinimumVelocity -> L
+    int mMaximumVelocity -> M
+    int mFlingDistance -> N
+    int mCloseEnough -> O
+    boolean mFakeDragging -> P
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> Q
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> R
+    boolean mFirstLayout -> S
+    boolean mNeedCalculatePageOffsets -> T
+    boolean mCalledSuper -> U
+    int mDecorChildCount -> V
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> W
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> Z
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> aa
+    android.support.v4.view.ViewPager$PageTransformer mPageTransformer -> ab
+    java.lang.reflect.Method mSetChildrenDrawingOrderEnabled -> ac
+    int mDrawingOrder -> ad
+    java.util.ArrayList mDrawingOrderedChildren -> ae
+    android.support.v4.view.ViewPager$ViewPositionComparator sPositionComparator -> af
+    java.lang.Runnable mEndScrollRunnable -> ag
+    int mScrollState -> ah
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> f
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    int getClientWidth() -> getClientWidth
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void scrollToItem(int,boolean,int,boolean) -> a
+    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
+    void setChildrenDrawingOrderEnabledCompat(boolean) -> setChildrenDrawingOrderEnabledCompat
+    int getChildDrawingOrder(int,int) -> getChildDrawingOrder
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    void dataSetChanged() -> a
+    void populate() -> b
+    void populate(int) -> a
+    void sortChildDrawingOrder() -> g
+    void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    void removeView(android.view.View) -> removeView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> d
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll(boolean) -> a
+    boolean isGutterDrag(float,float) -> a
+    void enableLayers(boolean) -> b
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean performDrag(float) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> h
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> i
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> c
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> c
+    boolean pageRight() -> d
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    int[] access$400() -> e
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.ak:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.al:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.am:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.an:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ao:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+    int position -> e
+    int childIndex -> f
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ap:
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.aq:
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PageTransformer -> android.support.v4.view.ar:
+    void transformPage(android.view.View,float) -> a
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.as:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.at:
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.view.ViewPager$ViewPositionComparator -> android.support.v4.view.au:
+    int compare(android.view.View,android.view.View) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.widget.DrawerLayout -> android.support.v4.widget.DrawerLayout:
+    int[] LAYOUT_ATTRS -> a
+    int mMinDrawerMargin -> b
+    int mScrimColor -> c
+    float mScrimOpacity -> d
+    android.graphics.Paint mScrimPaint -> e
+    android.support.v4.widget.ViewDragHelper mLeftDragger -> f
+    android.support.v4.widget.ViewDragHelper mRightDragger -> g
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mLeftCallback -> h
+    android.support.v4.widget.DrawerLayout$ViewDragCallback mRightCallback -> i
+    int mDrawerState -> j
+    boolean mInLayout -> k
+    boolean mFirstLayout -> l
+    int mLockModeLeft -> m
+    int mLockModeRight -> n
+    boolean mDisallowInterceptRequested -> o
+    boolean mChildrenCanceledTouch -> p
+    android.support.v4.widget.DrawerLayout$DrawerListener mListener -> q
+    float mInitialMotionX -> r
+    float mInitialMotionY -> s
+    android.graphics.drawable.Drawable mShadowLeft -> t
+    android.graphics.drawable.Drawable mShadowRight -> u
+    void setScrimColor(int) -> setScrimColor
+    void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener) -> setDrawerListener
+    void setDrawerLockMode(int) -> setDrawerLockMode
+    void setDrawerLockMode(int,int) -> a
+    int getDrawerLockMode(android.view.View) -> a
+    void updateDrawerState(int,int,android.view.View) -> a
+    void dispatchOnDrawerClosed(android.view.View) -> b
+    void dispatchOnDrawerOpened(android.view.View) -> c
+    void dispatchOnDrawerSlide(android.view.View,float) -> a
+    void setDrawerViewOffset(android.view.View,float) -> b
+    float getDrawerViewOffset(android.view.View) -> d
+    int getDrawerViewGravity(android.view.View) -> e
+    boolean checkDrawerViewGravity(android.view.View,int) -> a
+    android.view.View findOpenDrawer() -> a
+    android.view.View findDrawerWithGravity(int) -> a
+    java.lang.String gravityToString(int) -> b
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void requestLayout() -> requestLayout
+    void computeScroll() -> computeScroll
+    boolean hasOpaqueBackground(android.view.View) -> k
+    boolean drawChild(android.graphics.Canvas,android.view.View,long) -> drawChild
+    boolean isContentView(android.view.View) -> f
+    boolean isDrawerView(android.view.View) -> g
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void requestDisallowInterceptTouchEvent(boolean) -> requestDisallowInterceptTouchEvent
+    void closeDrawers() -> b
+    void closeDrawers(boolean) -> a
+    void openDrawer(android.view.View) -> h
+    void closeDrawer(android.view.View) -> i
+    boolean isDrawerVisible(android.view.View) -> j
+    boolean hasPeekingDrawer() -> d
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    boolean hasVisibleDrawer() -> e
+    android.view.View findVisibleDrawer() -> f
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    int[] access$100() -> c
+android.support.v4.widget.DrawerLayout$DrawerListener -> android.support.v4.widget.a:
+    void onDrawerSlide(android.view.View,float) -> a
+    void onDrawerOpened(android.view.View) -> a
+    void onDrawerClosed(android.view.View) -> b
+    void onDrawerStateChanged(int) -> a
+android.support.v4.widget.DrawerLayout$LayoutParams -> android.support.v4.widget.b:
+    int gravity -> a
+    float onScreen -> b
+    boolean isPeeking -> c
+    boolean knownOpen -> d
+android.support.v4.widget.DrawerLayout$SavedState -> android.support.v4.widget.DrawerLayout$SavedState:
+    int openDrawerGravity -> a
+    int lockModeLeft -> b
+    int lockModeRight -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.widget.DrawerLayout$SavedState$1 -> android.support.v4.widget.c:
+    android.support.v4.widget.DrawerLayout$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.widget.DrawerLayout$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.widget.DrawerLayout$ViewDragCallback -> android.support.v4.widget.d:
+    int mGravity -> b
+    android.support.v4.widget.ViewDragHelper mDragger -> c
+    java.lang.Runnable mPeekRunnable -> d
+    android.support.v4.widget.DrawerLayout this$0 -> a
+    void removeCallbacks() -> a
+    boolean tryCaptureView(android.view.View,int) -> a
+    void onViewDragStateChanged(int) -> a
+    void onViewPositionChanged(android.view.View,int,int,int,int) -> a
+    void onViewCaptured(android.view.View,int) -> b
+    void closeOtherDrawer() -> b
+    void onViewReleased(android.view.View,float,float) -> a
+    void onEdgeTouched(int,int) -> a
+    boolean onEdgeLock(int) -> b
+    void onEdgeDragStarted(int,int) -> b
+    int getViewHorizontalDragRange(android.view.View) -> a
+    int clampViewPositionHorizontal(android.view.View,int,int) -> a
+    int clampViewPositionVertical(android.view.View,int,int) -> b
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.e:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.widget.f:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.widget.g:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.widget.h:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.widget.i:
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.ScrollerCompat -> android.support.v4.widget.j:
+    java.lang.Object mScroller -> a
+    android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl IMPL -> b
+    boolean isFinished() -> a
+    int getCurrX() -> b
+    int getCurrY() -> c
+    int getFinalX() -> d
+    int getFinalY() -> e
+    boolean computeScrollOffset() -> f
+    void startScroll(int,int,int,int,int) -> a
+    void abortAnimation() -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl -> android.support.v4.widget.k:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplBase -> android.support.v4.widget.l:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplGingerbread -> android.support.v4.widget.m:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs -> android.support.v4.widget.n:
+android.support.v4.widget.ScrollerCompatGingerbread -> android.support.v4.widget.o:
+    boolean isFinished(java.lang.Object) -> a
+    int getCurrX(java.lang.Object) -> b
+    int getCurrY(java.lang.Object) -> c
+    boolean computeScrollOffset(java.lang.Object) -> d
+    void startScroll(java.lang.Object,int,int,int,int,int) -> a
+    void abortAnimation(java.lang.Object) -> e
+    int getFinalX(java.lang.Object) -> f
+    int getFinalY(java.lang.Object) -> g
+android.support.v4.widget.SlidingPaneLayout -> android.support.v4.widget.SlidingPaneLayout:
+    int mSliderFadeColor -> b
+    int mCoveredFadeColor -> c
+    android.graphics.drawable.Drawable mShadowDrawable -> d
+    int mOverhangSize -> e
+    boolean mCanSlide -> f
+    android.view.View mSlideableView -> g
+    float mSlideOffset -> h
+    float mParallaxOffset -> i
+    int mSlideRange -> j
+    boolean mIsUnableToDrag -> k
+    int mParallaxBy -> l
+    float mInitialMotionX -> m
+    float mInitialMotionY -> n
+    android.support.v4.widget.SlidingPaneLayout$PanelSlideListener mPanelSlideListener -> o
+    android.support.v4.widget.ViewDragHelper mDragHelper -> p
+    boolean mPreservedOpenState -> q
+    boolean mFirstLayout -> r
+    android.graphics.Rect mTmpRect -> s
+    java.util.ArrayList mPostedRunnables -> t
+    android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl IMPL -> a
+    void setParallaxDistance(int) -> setParallaxDistance
+    int getParallaxDistance() -> getParallaxDistance
+    void setSliderFadeColor(int) -> setSliderFadeColor
+    int getSliderFadeColor() -> getSliderFadeColor
+    void setCoveredFadeColor(int) -> setCoveredFadeColor
+    int getCoveredFadeColor() -> getCoveredFadeColor
+    void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener) -> setPanelSlideListener
+    void updateObscuredViewsVisibility(android.view.View) -> a
+    void setAllChildrenVisible() -> a
+    boolean hasOpaqueBackground(android.view.View) -> c
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void requestChildFocus(android.view.View,android.view.View) -> requestChildFocus
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean closePane(android.view.View,int) -> a
+    boolean openPane(android.view.View,int) -> b
+    boolean openPane() -> b
+    boolean closePane() -> c
+    boolean isOpen() -> d
+    boolean isSlideable() -> e
+    void dimChildView(android.view.View,float,int) -> a
+    boolean drawChild(android.graphics.Canvas,android.view.View,long) -> drawChild
+    void invalidateChildRegion(android.view.View) -> d
+    boolean smoothSlideTo(float,int) -> a
+    void computeScroll() -> computeScroll
+    void setShadowDrawable(android.graphics.drawable.Drawable) -> setShadowDrawable
+    void setShadowResource(int) -> setShadowResource
+    void draw(android.graphics.Canvas) -> draw
+    void parallaxOtherViews(float) -> a
+    boolean isDimmed(android.view.View) -> b
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void access$900(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+    java.util.ArrayList access$1000(android.support.v4.widget.SlidingPaneLayout) -> a
+android.support.v4.widget.SlidingPaneLayout$1 -> android.support.v4.widget.p:
+android.support.v4.widget.SlidingPaneLayout$DisableLayerRunnable -> android.support.v4.widget.q:
+    android.view.View mChildView -> a
+    android.support.v4.widget.SlidingPaneLayout this$0 -> b
+    void run() -> run
+android.support.v4.widget.SlidingPaneLayout$LayoutParams -> android.support.v4.widget.r:
+    int[] ATTRS -> e
+    float weight -> a
+    boolean slideable -> b
+    boolean dimWhenOffset -> c
+    android.graphics.Paint dimPaint -> d
+android.support.v4.widget.SlidingPaneLayout$PanelSlideListener -> android.support.v4.widget.s:
+android.support.v4.widget.SlidingPaneLayout$SavedState -> android.support.v4.widget.SlidingPaneLayout$SavedState:
+    boolean isOpen -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.widget.SlidingPaneLayout$SavedState$1 -> android.support.v4.widget.t:
+    android.support.v4.widget.SlidingPaneLayout$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.widget.SlidingPaneLayout$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImpl -> android.support.v4.widget.u:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplBase -> android.support.v4.widget.v:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJB -> android.support.v4.widget.w:
+    java.lang.reflect.Method mGetDisplayList -> a
+    java.lang.reflect.Field mRecreateDisplayList -> b
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.SlidingPaneLayout$SlidingPanelLayoutImplJBMR1 -> android.support.v4.widget.x:
+    void invalidateChildRegion(android.support.v4.widget.SlidingPaneLayout,android.view.View) -> a
+android.support.v4.widget.ViewDragHelper -> android.support.v4.widget.y:
+    int mDragState -> a
+    int mTouchSlop -> b
+    int mActivePointerId -> c
+    float[] mInitialMotionX -> d
+    float[] mInitialMotionY -> e
+    float[] mLastMotionX -> f
+    float[] mLastMotionY -> g
+    int[] mInitialEdgesTouched -> h
+    int[] mEdgeDragsInProgress -> i
+    int[] mEdgeDragsLocked -> j
+    int mPointersDown -> k
+    android.view.VelocityTracker mVelocityTracker -> l
+    float mMaxVelocity -> m
+    float mMinVelocity -> n
+    int mEdgeSize -> o
+    int mTrackingEdges -> p
+    android.support.v4.widget.ScrollerCompat mScroller -> q
+    android.support.v4.widget.ViewDragHelper$Callback mCallback -> r
+    android.view.View mCapturedView -> s
+    boolean mReleaseInProgress -> t
+    android.view.ViewGroup mParentView -> u
+    android.view.animation.Interpolator sInterpolator -> v
+    java.lang.Runnable mSetIdleRunnable -> w
+    int getViewDragState() -> a
+    int getEdgeSize() -> b
+    void captureChildView(android.view.View,int) -> a
+    android.view.View getCapturedView() -> c
+    int getTouchSlop() -> d
+    void cancel() -> e
+    void abort() -> f
+    boolean smoothSlideViewTo(android.view.View,int,int) -> a
+    boolean settleCapturedViewAt(int,int) -> a
+    boolean forceSettleCapturedViewAt(int,int,int,int) -> a
+    int computeSettleDuration(android.view.View,int,int,int,int) -> a
+    int computeAxisDuration(int,int,int) -> a
+    int clampMag(int,int,int) -> b
+    float clampMag(float,float,float) -> a
+    float distanceInfluenceForSnapDuration(float) -> a
+    boolean continueSettling(boolean) -> a
+    void dispatchViewReleased(float,float) -> a
+    void clearMotionHistory() -> g
+    void clearMotionHistory(int) -> e
+    void ensureMotionHistorySizeForId(int) -> f
+    void saveInitialMotion(float,float,int) -> a
+    void saveLastMotion(android.view.MotionEvent) -> c
+    boolean isPointerDown(int) -> a
+    void setDragState(int) -> b
+    boolean tryCaptureViewForDrag(android.view.View,int) -> b
+    boolean shouldInterceptTouchEvent(android.view.MotionEvent) -> a
+    void processTouchEvent(android.view.MotionEvent) -> b
+    void reportNewEdgeDrags(float,float,int) -> b
+    boolean checkNewEdgeDrag(float,float,int,int) -> a
+    boolean checkTouchSlop(android.view.View,float,float) -> a
+    boolean checkTouchSlop(int) -> c
+    boolean checkTouchSlop(int,int) -> b
+    boolean isEdgeTouched(int) -> d
+    boolean isEdgeTouched(int,int) -> c
+    void releaseViewForPointerUp() -> h
+    void dragTo(int,int,int,int) -> b
+    boolean isCapturedViewUnder(int,int) -> d
+    boolean isViewUnder(android.view.View,int,int) -> b
+    android.view.View findTopChildUnder(int,int) -> e
+    int getEdgesTouched(int,int) -> f
+android.support.v4.widget.ViewDragHelper$1 -> android.support.v4.widget.z:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.aa:
+    void onViewDragStateChanged(int) -> a
+    void onViewPositionChanged(android.view.View,int,int,int,int) -> a
+    void onViewCaptured(android.view.View,int) -> b
+    void onViewReleased(android.view.View,float,float) -> a
+    void onEdgeTouched(int,int) -> a
+    boolean onEdgeLock(int) -> b
+    void onEdgeDragStarted(int,int) -> b
+    int getOrderedChildIndex(int) -> c
+    int getViewHorizontalDragRange(android.view.View) -> a
+    int getViewVerticalDragRange(android.view.View) -> b
+    boolean tryCaptureView(android.view.View,int) -> a
+    int clampViewPositionHorizontal(android.view.View,int,int) -> a
+    int clampViewPositionVertical(android.view.View,int,int) -> b
+com.bodong.dianjinweb.DianJinPlatform -> com.bodong.dianjinweb.DianJinPlatform:
+    int DIANJIN_ERROR_ILLEGAL_CONSUNE -> DIANJIN_ERROR_ILLEGAL_CONSUNE
+    int DIANJIN_ERROR_BALANCE_NO_ENOUGH -> DIANJIN_ERROR_BALANCE_NO_ENOUGH
+    int DIANJIN_ERROR_ACCOUNT_NO_EXIST -> DIANJIN_ERROR_ACCOUNT_NO_EXIST
+    int DIANJIN_ERROR_ORDER_SERIAL_REPEAT -> DIANJIN_ERROR_ORDER_SERIAL_REPEAT
+    int DIANJIN_ERROR_BEYOND_LARGEST_AMOUNT -> DIANJIN_ERROR_BEYOND_LARGEST_AMOUNT
+    int DIANJIN_RETURN_CONSUME_ID_NO_EXIST -> DIANJIN_RETURN_CONSUME_ID_NO_EXIST
+    int DIANJIN_NET_ERROR -> DIANJIN_NET_ERROR
+    int DIANJIN_DUPLICATE_ACTIVATION -> DIANJIN_DUPLICATE_ACTIVATION
+    int DIANJIN_ACTIVATION_FAILURE -> DIANJIN_ACTIVATION_FAILURE
+    int DIANJIN_ADVERTSING_EXPIRED -> DIANJIN_ADVERTSING_EXPIRED
+    void initialize(android.content.Context,int,java.lang.String,int) -> initialize
+    void destory(android.content.Context) -> destory
+    void showFloatView(android.content.Context) -> showFloatView
+    void hideFloatView(android.content.Context) -> hideFloatView
+    void setFloatViewPosition(android.content.Context,int,int) -> setFloatViewPosition
+    void consume(android.content.Context,long,com.bodong.dianjinweb.listener.ConsumeListener) -> consume
+    long getBalance(android.content.Context) -> getBalance
+    void addReward(android.content.Context,long) -> addReward
+    void showOfferWall(android.content.Context) -> showOfferWall
+    void setAppActivedListener(com.bodong.dianjinweb.listener.AppActiveListener) -> setAppActivedListener
+    void requestChannelEnable(android.content.Context,com.bodong.dianjinweb.listener.ChannelListener) -> requestChannelEnable
+com.bodong.dianjinweb.a.a -> com.bodong.dianjinweb.a.a:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    boolean d -> d
+    java.lang.String a() -> a
+    java.lang.String b() -> b
+    java.lang.String c() -> c
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
+com.bodong.dianjinweb.a.aa -> com.bodong.dianjinweb.a.aa:
+    com.bodong.dianjinweb.banner.BaseBanner a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.bodong.dianjinweb.a.ab -> com.bodong.dianjinweb.a.ab:
+    com.bodong.dianjinweb.banner.DianJinBanner a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.ac -> com.bodong.dianjinweb.a.ac:
+    com.bodong.dianjinweb.banner.DianJinBanner a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.ad -> com.bodong.dianjinweb.a.ad:
+    com.bodong.dianjinweb.banner.DianJinBanner a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.ae -> com.bodong.dianjinweb.a.ae:
+    com.bodong.dianjinweb.banner.DianJinBanner a -> a
+    com.bodong.dianjinweb.banner.DianJinBannerView b -> b
+    void a(android.graphics.Bitmap,java.lang.String) -> a
+com.bodong.dianjinweb.a.af -> com.bodong.dianjinweb.a.af:
+    com.bodong.dianjinweb.banner.DianJinBanner a -> a
+    void a(java.util.List) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.ag -> com.bodong.dianjinweb.a.ag:
+    com.bodong.dianjinweb.banner.DianJinBannerView a -> a
+    void a(android.graphics.Bitmap,java.lang.String) -> a
+com.bodong.dianjinweb.a.ah -> com.bodong.dianjinweb.a.ah:
+    com.bodong.dianjinweb.banner.DianJinMiniBanner a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.ai -> com.bodong.dianjinweb.a.ai:
+    com.bodong.dianjinweb.banner.DianJinMiniBanner a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.aj -> com.bodong.dianjinweb.a.aj:
+    com.bodong.dianjinweb.banner.DianJinMiniBanner a -> a
+    void a(java.util.List) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.ak -> com.bodong.dianjinweb.a.ak:
+    android.widget.ImageView a -> a
+    android.widget.TextView b -> b
+    android.view.WindowManager d -> d
+    int e -> e
+    int f -> f
+    float g -> g
+    java.lang.String c -> c
+    void d() -> d
+    void a() -> a
+    android.widget.ImageView e() -> e
+    android.widget.TextView f() -> f
+    android.widget.ImageView b() -> b
+    void a(android.view.View$OnClickListener) -> a
+    android.widget.TextView c() -> c
+com.bodong.dianjinweb.a.al -> com.bodong.dianjinweb.a.al:
+    java.lang.String[] a -> a
+com.bodong.dianjinweb.a.am -> com.bodong.dianjinweb.a.am:
+    com.bodong.dianjinweb.a.am a -> a
+    java.util.List b -> b
+    java.util.List c -> c
+    java.util.List d -> d
+    com.bodong.dianjinweb.a.am$a e -> e
+    java.util.List f -> f
+    java.util.List g -> g
+    com.bodong.dianjinweb.listener.AppActiveListener h -> h
+    boolean i -> i
+    com.bodong.dianjinweb.a.am a() -> a
+    void a(android.content.Context) -> a
+    void b() -> b
+    void c() -> c
+    void a(com.bodong.dianjinweb.a.am$b) -> a
+    void b(com.bodong.dianjinweb.a.am$b) -> b
+    void a(com.bodong.dianjinweb.a.am$c) -> a
+    java.util.List d() -> d
+    java.util.List e() -> e
+    com.bodong.dianjinweb.a.w a(java.lang.String) -> a
+    boolean b(java.lang.String) -> b
+    void b(android.content.Context) -> b
+    boolean f() -> f
+    void c(android.content.Context) -> c
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
+    void d(android.content.Context) -> d
+    void a(android.content.Context,com.bodong.dianjinweb.a.w) -> a
+    void b(android.content.Context,com.bodong.dianjinweb.a.w) -> b
+    void a(android.content.Context,com.bodong.dianjinweb.a.w,boolean) -> a
+    void c(android.content.Context,com.bodong.dianjinweb.a.w) -> c
+    void d(android.content.Context,com.bodong.dianjinweb.a.w) -> d
+    void e(android.content.Context,com.bodong.dianjinweb.a.w) -> e
+    void a(android.content.Context,java.lang.String) -> a
+    void a(com.bodong.dianjinweb.listener.AppActiveListener) -> a
+    void b(android.content.Context,java.lang.String) -> b
+    void g() -> g
+    void c(android.content.Context,java.lang.String) -> c
+    void d(android.content.Context,java.lang.String) -> d
+    com.bodong.dianjinweb.a.w c(java.lang.String) -> c
+    com.bodong.dianjinweb.a.w d(java.lang.String) -> d
+    com.bodong.dianjinweb.a.w e(java.lang.String) -> e
+    void e(android.content.Context) -> e
+    void f(android.content.Context,com.bodong.dianjinweb.a.w) -> f
+    void g(android.content.Context,com.bodong.dianjinweb.a.w) -> g
+    void h(android.content.Context,com.bodong.dianjinweb.a.w) -> h
+    void i(android.content.Context,com.bodong.dianjinweb.a.w) -> i
+    void j(android.content.Context,com.bodong.dianjinweb.a.w) -> j
+    void a(long) -> a
+    void a(com.bodong.dianjinweb.a.w) -> a
+    void f(android.content.Context) -> f
+    void g(android.content.Context) -> g
+    java.util.List h(android.content.Context) -> h
+    java.util.List i(android.content.Context) -> i
+    void j(android.content.Context) -> j
+    void k(android.content.Context) -> k
+    void a(com.bodong.dianjinweb.a.am,android.content.Context,com.bodong.dianjinweb.a.w) -> a
+    void b(com.bodong.dianjinweb.a.am,android.content.Context,com.bodong.dianjinweb.a.w) -> b
+    void a(com.bodong.dianjinweb.a.am,com.bodong.dianjinweb.a.w) -> a
+    void a(com.bodong.dianjinweb.a.am,android.content.Context) -> a
+    com.bodong.dianjinweb.listener.AppActiveListener a(com.bodong.dianjinweb.a.am) -> a
+com.bodong.dianjinweb.a.am$a -> com.bodong.dianjinweb.a.c:
+    com.bodong.dianjinweb.a.am a -> a
+    void a(android.content.Context,java.lang.String) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String,java.lang.String) -> b
+    void a(android.content.Context,java.lang.String,long,java.lang.String) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,float,long,long,float,long) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+    void a(android.content.Context,java.lang.String,int,java.lang.String) -> a
+    void c(android.content.Context,java.lang.String,java.lang.String) -> c
+    void d(android.content.Context,java.lang.String,java.lang.String) -> d
+    void a(android.content.Context,java.lang.String,int) -> a
+    void a(java.lang.String,boolean) -> a
+    void a(java.lang.String) -> a
+    void a() -> a
+    void a(android.content.Context,java.lang.String,android.app.Notification) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,android.app.Notification) -> a
+    void a(android.content.Context,int,java.lang.String) -> a
+com.bodong.dianjinweb.a.am$b -> com.bodong.dianjinweb.a.am$b:
+    void a(com.bodong.dianjinweb.a.w) -> a
+com.bodong.dianjinweb.a.am$c -> com.bodong.dianjinweb.a.am$c:
+    void a(long) -> a
+com.bodong.dianjinweb.a.an -> com.bodong.dianjinweb.a.d:
+    com.bodong.dianjinweb.a.am a -> a
+    com.bodong.dianjinweb.a.w b -> b
+    android.content.Context c -> c
+    int[] d -> d
+    void a(java.lang.Object) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    int[] a() -> a
+com.bodong.dianjinweb.a.ao -> com.bodong.dianjinweb.a.ao:
+    com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager a -> a
+    void a(com.bodong.dianjinweb.a.w) -> a
+    com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager a(com.bodong.dianjinweb.a.ao) -> a
+com.bodong.dianjinweb.a.ap -> com.bodong.dianjinweb.a.v:
+    com.bodong.dianjinweb.a.ao a -> a
+    com.bodong.dianjinweb.a.w b -> b
+    void run() -> run
+com.bodong.dianjinweb.a.aq -> com.bodong.dianjinweb.a.aq:
+    com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager a -> a
+    android.content.Context b -> b
+    java.lang.Object a(java.lang.Object[]) -> a
+    void a(java.lang.Object,java.lang.String) -> a
+com.bodong.dianjinweb.a.ar -> com.bodong.dianjinweb.a.ar:
+    com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.as -> com.bodong.dianjinweb.a.as:
+    com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.at -> com.bodong.dianjinweb.a.at:
+    java.util.List a -> a
+    java.util.List b -> b
+    android.content.Context c -> c
+    boolean d -> d
+    boolean a() -> a
+    void b() -> b
+    int getGroupCount() -> getGroupCount
+    int getChildrenCount(int) -> getChildrenCount
+    java.lang.Object getChild(int,int) -> getChild
+    android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup) -> getGroupView
+    android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup) -> getChildView
+    boolean hasStableIds() -> hasStableIds
+    boolean isChildSelectable(int,int) -> isChildSelectable
+    java.lang.Object getGroup(int) -> getGroup
+    long getGroupId(int) -> getGroupId
+    long getChildId(int,int) -> getChildId
+    android.view.View a(com.bodong.dianjinweb.a.at$a) -> a
+    android.view.View c() -> c
+    android.widget.LinearLayout b(com.bodong.dianjinweb.a.at$a) -> b
+    android.widget.ImageView d() -> d
+    android.widget.TextView e() -> e
+    android.view.View f() -> f
+com.bodong.dianjinweb.a.at$a -> com.bodong.dianjinweb.a.an:
+    android.widget.TextView a -> a
+    android.widget.ImageView b -> b
+com.bodong.dianjinweb.a.au -> com.bodong.dianjinweb.a.ap:
+    com.bodong.dianjinweb.a.at a -> a
+    com.bodong.dianjinweb.view.ItemView b -> b
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.av -> com.bodong.dianjinweb.a.av:
+    com.bodong.dianjinweb.a.av b -> b
+    java.util.Timer c -> c
+    com.bodong.dianjinweb.a.av$a d -> d
+    long e -> e
+    boolean a -> a
+    void a(android.content.Context) -> a
+    void a() -> a
+    com.bodong.dianjinweb.a.av b() -> b
+com.bodong.dianjinweb.a.av$a -> com.bodong.dianjinweb.a.au:
+    android.content.Context a -> a
+    com.bodong.dianjinweb.a.av b -> b
+    void run() -> run
+    void a(com.bodong.dianjinweb.a.bd) -> a
+    void a(com.bodong.dianjinweb.a.av$a,com.bodong.dianjinweb.a.bd) -> a
+com.bodong.dianjinweb.a.aw -> com.bodong.dianjinweb.a.aw:
+    com.bodong.dianjinweb.a.av$a a -> a
+    void a(com.bodong.dianjinweb.a.bd) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.ax -> com.bodong.dianjinweb.a.ax:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+com.bodong.dianjinweb.a.ay -> com.bodong.dianjinweb.a.ay:
+com.bodong.dianjinweb.a.az -> com.bodong.dianjinweb.a.az:
+    boolean a -> a
+com.bodong.dianjinweb.a.b -> com.bodong.dianjinweb.a.b:
+    java.lang.String a -> a
+    int b -> b
+    long c -> c
+    boolean d -> d
+    void a() -> a
+    void a(int,long) -> a
+    void a(android.os.Message) -> a
+    void b(android.os.Message) -> b
+    void c(android.os.Message) -> c
+com.bodong.dianjinweb.a.ba -> com.bodong.dianjinweb.a.ba:
+    java.lang.Boolean a -> a
+    int b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+com.bodong.dianjinweb.a.bb -> com.bodong.dianjinweb.a.bb:
+    int a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    int h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.lang.String k -> k
+    java.lang.String l -> l
+    int m -> m
+    int n -> n
+    int o -> o
+com.bodong.dianjinweb.a.bc -> com.bodong.dianjinweb.a.bc:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+com.bodong.dianjinweb.a.bd -> com.bodong.dianjinweb.a.bd:
+    int a -> a
+com.bodong.dianjinweb.a.be -> com.bodong.dianjinweb.a.be:
+    java.lang.Integer a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+com.bodong.dianjinweb.a.bf -> com.bodong.dianjinweb.a.bf:
+    void a(android.content.Context,com.bodong.dianjinweb.a.ce) -> a
+    void b(android.content.Context,com.bodong.dianjinweb.a.ce) -> b
+com.bodong.dianjinweb.a.bg -> com.bodong.dianjinweb.a.bg:
+com.bodong.dianjinweb.a.bh -> com.bodong.dianjinweb.a.bh:
+    void b(android.content.Context) -> b
+    void c(android.content.Context) -> c
+    void d(android.content.Context) -> d
+    void a(android.content.Context) -> a
+com.bodong.dianjinweb.a.bi -> com.bodong.dianjinweb.a.bi:
+    java.lang.String a -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.ce) -> a
+com.bodong.dianjinweb.a.bj -> com.bodong.dianjinweb.a.bj:
+    int a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    com.bodong.dianjinweb.a.bb g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    int k -> k
+    int l -> l
+    android.content.Context m -> m
+    com.bodong.dianjinweb.a.ba n -> n
+    java.lang.String o -> o
+    java.lang.String p -> p
+    java.lang.String q -> q
+    java.lang.String r -> r
+    java.lang.String s -> s
+    java.lang.String t -> t
+    void a(android.content.Context,int,java.lang.String,int) -> a
+    java.lang.String a(android.content.Context) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.listener.ChannelListener) -> a
+    void a(android.content.Context,int,java.lang.String,java.lang.String,java.lang.String,int) -> a
+    void e() -> e
+    com.bodong.dianjinweb.a.bb b(android.content.Context) -> b
+    void c(android.content.Context) -> c
+    void i(android.content.Context) -> i
+    void a(android.content.Context,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String) -> a
+    java.lang.String d(android.content.Context) -> d
+    java.lang.String e(android.content.Context) -> e
+    void a(android.content.Context,int,java.lang.String,java.lang.String,java.lang.String) -> a
+    int f(android.content.Context) -> f
+    java.lang.String g(android.content.Context) -> g
+    java.lang.String a() -> a
+    int h(android.content.Context) -> h
+    java.lang.String b() -> b
+    java.lang.String c() -> c
+    int d() -> d
+    void a(com.bodong.dianjinweb.a.bj,com.bodong.dianjinweb.a.ba) -> a
+    com.bodong.dianjinweb.a.ba a(com.bodong.dianjinweb.a.bj) -> a
+    void a(com.bodong.dianjinweb.a.bj,android.content.Context) -> a
+    void a(com.bodong.dianjinweb.a.bj,int) -> a
+    void b(com.bodong.dianjinweb.a.bj) -> b
+    android.content.Context c(com.bodong.dianjinweb.a.bj) -> c
+    int d(com.bodong.dianjinweb.a.bj) -> d
+com.bodong.dianjinweb.a.bk -> com.bodong.dianjinweb.a.bk:
+    com.bodong.dianjinweb.a.bj a -> a
+    com.bodong.dianjinweb.listener.ChannelListener b -> b
+    void a(com.bodong.dianjinweb.a.az) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.bl -> com.bodong.dianjinweb.a.bl:
+    com.bodong.dianjinweb.a.bj a -> a
+    void a(java.lang.Object) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+com.bodong.dianjinweb.a.bm -> com.bodong.dianjinweb.a.bm:
+    com.bodong.dianjinweb.a.bj a -> a
+    android.content.Context b -> b
+    void a(com.bodong.dianjinweb.a.ba) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.bn -> com.bodong.dianjinweb.a.bn:
+    com.bodong.dianjinweb.a.bm a -> a
+com.bodong.dianjinweb.a.bo -> com.bodong.dianjinweb.a.bo:
+    java.util.HashMap a -> a
+    com.bodong.dianjinweb.a.bj a() -> a
+    com.bodong.dianjinweb.a.bt b() -> b
+    com.bodong.dianjinweb.a.bp c() -> c
+    com.bodong.dianjinweb.a.bf d() -> d
+    com.bodong.dianjinweb.a.bh e() -> e
+    com.bodong.dianjinweb.a.bi f() -> f
+    com.bodong.dianjinweb.a.bg a(java.lang.Class) -> a
+com.bodong.dianjinweb.a.bp -> com.bodong.dianjinweb.a.bp:
+    void a(android.content.Context) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.w,com.bodong.dianjinweb.a.ce) -> a
+    java.util.List b(android.content.Context) -> b
+    boolean a(android.content.pm.ApplicationInfo) -> a
+com.bodong.dianjinweb.a.bq -> com.bodong.dianjinweb.a.bq:
+    com.bodong.dianjinweb.a.bp a -> a
+    void a(java.lang.Object) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+com.bodong.dianjinweb.a.br -> com.bodong.dianjinweb.a.br:
+    com.bodong.dianjinweb.a.bp a -> a
+    android.content.Context b -> b
+    com.bodong.dianjinweb.a.w c -> c
+    com.bodong.dianjinweb.a.ce d -> d
+    void a(java.lang.Object) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+com.bodong.dianjinweb.a.bs -> com.bodong.dianjinweb.a.bs:
+    com.bodong.dianjinweb.a.br a -> a
+    com.bodong.dianjinweb.a.ce b -> b
+    void a(java.lang.Object) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+com.bodong.dianjinweb.a.bt -> com.bodong.dianjinweb.a.bt:
+    java.lang.String a -> a
+    java.lang.String a(android.content.Context) -> a
+    com.bodong.dianjinweb.a.bt$a b(android.content.Context) -> b
+    byte[] c(android.content.Context) -> c
+    java.lang.String a(android.content.Context,com.bodong.dianjinweb.a.bb,byte[]) -> a
+    void a(java.lang.String) -> a
+com.bodong.dianjinweb.a.bt$a -> com.bodong.dianjinweb.a.bt$a:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    int d -> d
+    java.lang.String e -> e
+com.bodong.dianjinweb.a.bt$b -> com.bodong.dianjinweb.a.bt$b:
+    long serialVersionUID -> serialVersionUID
+    int mCode -> mCode
+    int getErrorCode() -> getErrorCode
+com.bodong.dianjinweb.a.bu -> com.bodong.dianjinweb.a.bu:
+    char[] a -> a
+    byte[] b -> b
+    java.lang.String a(byte[]) -> a
+    byte[] a(java.lang.String) -> a
+    byte[] b(java.lang.String) -> b
+com.bodong.dianjinweb.a.bv -> com.bodong.dianjinweb.a.bv:
+    java.lang.String a(android.content.Context) -> a
+    java.lang.String c(android.content.Context) -> c
+    java.lang.String b(android.content.Context) -> b
+com.bodong.dianjinweb.a.bw -> com.bodong.dianjinweb.a.bw:
+    byte[] a(byte[]) -> a
+    byte[] b(byte[]) -> b
+com.bodong.dianjinweb.a.bx -> com.bodong.dianjinweb.a.bx:
+    int a(android.content.Context) -> a
+com.bodong.dianjinweb.a.by -> com.bodong.dianjinweb.a.by:
+    byte[] a(android.content.Context,byte[],java.lang.String) -> a
+com.bodong.dianjinweb.a.bz -> com.bodong.dianjinweb.a.bz:
+    java.lang.String a(android.content.Context,java.lang.String,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String,java.lang.String) -> b
+    android.content.SharedPreferences a(android.content.Context) -> a
+com.bodong.dianjinweb.a.c -> com.bodong.dianjinweb.a.cb:
+    com.bodong.dianjinweb.a.c a -> a
+    android.os.Handler b -> b
+    android.os.HandlerThread c -> c
+    int d -> d
+    boolean e -> e
+    int f -> f
+    long g -> g
+    com.bodong.dianjinweb.a.c a() -> a
+    android.os.Handler b() -> b
+    void c() -> c
+    void d() -> d
+    void run() -> run
+    void e() -> e
+    com.bodong.dianjinweb.a.n f() -> f
+    void a(com.bodong.dianjinweb.a.n) -> a
+com.bodong.dianjinweb.a.ca -> com.bodong.dianjinweb.a.ca:
+    java.lang.String a(java.lang.String,java.lang.String) -> a
+    com.bodong.dianjinweb.a.do a(java.lang.String) -> a
+com.bodong.dianjinweb.a.cb -> com.bodong.dianjinweb.a.cn:
+com.bodong.dianjinweb.a.cc -> com.bodong.dianjinweb.a.cc:
+    java.lang.String a -> a
+    byte[] a(byte[],byte,int,java.lang.String) -> a
+    byte[] a(byte[],byte[]) -> a
+    com.bodong.dianjinweb.a.cc$b a(byte[]) -> a
+    byte[] a(android.content.Context,java.util.HashMap,byte) -> a
+    void a(java.io.DataInputStream,com.bodong.dianjinweb.a.cc$a) -> a
+    byte[] a(byte[],int) -> a
+    byte[] a(android.content.Context,byte[],byte[],java.lang.String,int) -> a
+com.bodong.dianjinweb.a.cc$a -> com.bodong.dianjinweb.a.cc$a:
+    byte a -> a
+    short b -> b
+    int c -> c
+    int d -> d
+    byte[] e -> e
+com.bodong.dianjinweb.a.cc$b -> com.bodong.dianjinweb.a.cc$b:
+    com.bodong.dianjinweb.a.cc$a a -> a
+    byte[] b -> b
+com.bodong.dianjinweb.a.cd -> com.bodong.dianjinweb.a.cd:
+    com.bodong.dianjinweb.a.cd SUCCEED -> SUCCEED
+    com.bodong.dianjinweb.a.cd UNINIT_APPKEY -> UNINIT_APPKEY
+    com.bodong.dianjinweb.a.cd UNINIT_APPSECRETE -> UNINIT_APPSECRETE
+    com.bodong.dianjinweb.a.cd APP_NOT_AUTHORIZED -> APP_NOT_AUTHORIZED
+    com.bodong.dianjinweb.a.cd SDK_DEPRECATED -> SDK_DEPRECATED
+    com.bodong.dianjinweb.a.cd NET_DISCONNECT -> NET_DISCONNECT
+    com.bodong.dianjinweb.a.cd SERVER_ERROR -> SERVER_ERROR
+    com.bodong.dianjinweb.a.cd NET_ERROR -> NET_ERROR
+    com.bodong.dianjinweb.a.cd ENCODE_ERROR -> ENCODE_ERROR
+    com.bodong.dianjinweb.a.cd DECODE_ERROR -> DECODE_ERROR
+    com.bodong.dianjinweb.a.cd REQUEST_FAILED -> REQUEST_FAILED
+    com.bodong.dianjinweb.a.cd NOT_ENOUGH -> NOT_ENOUGH
+    com.bodong.dianjinweb.a.cd USER_INVAILD -> USER_INVAILD
+    com.bodong.dianjinweb.a.cd ORDER_REPEAT -> ORDER_REPEAT
+    com.bodong.dianjinweb.a.cd PASS_MAX -> PASS_MAX
+    com.bodong.dianjinweb.a.cd ACTION_INVAILD -> ACTION_INVAILD
+    com.bodong.dianjinweb.a.cd DUPLICATE_INSTALL -> DUPLICATE_INSTALL
+    com.bodong.dianjinweb.a.cd INSTALL_FAILURE -> INSTALL_FAILURE
+    com.bodong.dianjinweb.a.cd DUPLICATE_ACTIVATION -> DUPLICATE_ACTIVATION
+    com.bodong.dianjinweb.a.cd ACTIVATION_FAILURE -> ACTIVATION_FAILURE
+    com.bodong.dianjinweb.a.cd ADVERTSING_EXPIRED -> ADVERTSING_EXPIRED
+    com.bodong.dianjinweb.a.cd UNKNOWN -> UNKNOWN
+    int code -> code
+    java.lang.String message -> message
+    com.bodong.dianjinweb.a.cd[] ENUM$VALUES -> ENUM$VALUES
+    com.bodong.dianjinweb.a.cd getInstance(int) -> getInstance
+    com.bodong.dianjinweb.a.cd[] values() -> values
+    com.bodong.dianjinweb.a.cd valueOf(java.lang.String) -> valueOf
+com.bodong.dianjinweb.a.ce -> com.bodong.dianjinweb.a.ce:
+    void a(java.lang.Object) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+com.bodong.dianjinweb.a.cf -> com.bodong.dianjinweb.a.cf:
+    java.lang.Object a(java.lang.Object[]) -> a
+    void b(com.bodong.dianjinweb.a.ci) -> b
+    void a(com.bodong.dianjinweb.a.ci) -> a
+    void a(android.content.Context,java.lang.String,com.bodong.dianjinweb.a.ci,java.util.HashMap,int,com.bodong.dianjinweb.a.ce) -> a
+    void a(java.lang.Object,java.lang.String) -> a
+com.bodong.dianjinweb.a.cg -> com.bodong.dianjinweb.a.cg:
+    com.bodong.dianjinweb.a.cg$a a -> a
+    void a(android.content.Context,int,com.bodong.dianjinweb.a.ce) -> a
+    void b(android.content.Context,int,com.bodong.dianjinweb.a.ce) -> b
+    void c(android.content.Context,int,com.bodong.dianjinweb.a.ce) -> c
+    void a(android.content.Context,java.util.List,com.bodong.dianjinweb.a.ce) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.ce) -> a
+    void b(android.content.Context,com.bodong.dianjinweb.a.ce) -> b
+    void c(android.content.Context,com.bodong.dianjinweb.a.ce) -> c
+    void d(android.content.Context,com.bodong.dianjinweb.a.ce) -> d
+    void a(android.content.Context,int,java.util.HashMap,com.bodong.dianjinweb.a.ce,java.lang.Object[]) -> a
+    void a(android.content.Context,int,byte,java.util.HashMap,com.bodong.dianjinweb.a.ce,java.lang.Object[]) -> a
+    java.lang.reflect.Type b(com.bodong.dianjinweb.a.ce) -> b
+    java.lang.reflect.Type a(com.bodong.dianjinweb.a.ce) -> a
+com.bodong.dianjinweb.a.cg$a -> com.bodong.dianjinweb.a.dt:
+    void a(android.content.Context,java.lang.String,com.bodong.dianjinweb.a.ci,java.util.HashMap,int,com.bodong.dianjinweb.a.ce) -> a
+com.bodong.dianjinweb.a.ch -> com.bodong.dianjinweb.a.ch:
+    void a(android.content.Context,com.bodong.dianjinweb.a.ce) -> a
+com.bodong.dianjinweb.a.ch$a -> com.bodong.dianjinweb.a.ch$a:
+    void a(com.bodong.dianjinweb.a.ci) -> a
+com.bodong.dianjinweb.a.ci -> com.bodong.dianjinweb.a.ci:
+    byte a -> a
+    android.content.Context b -> b
+    com.bodong.dianjinweb.a.ce c -> c
+    int d -> d
+    com.bodong.dianjinweb.a.cd e -> e
+    java.lang.Object f -> f
+    java.util.HashMap g -> g
+    boolean h -> h
+    java.lang.Object[] i -> i
+com.bodong.dianjinweb.a.cj -> com.bodong.dianjinweb.a.cj:
+    android.graphics.drawable.Drawable a(android.content.Context,int,java.lang.String) -> a
+com.bodong.dianjinweb.a.ck -> com.bodong.dianjinweb.a.ck:
+com.bodong.dianjinweb.a.ck$a -> com.bodong.dianjinweb.a.ck$a:
+    int a -> a
+    int b -> b
+    int c -> c
+    int d -> d
+    int e -> e
+    int f -> f
+    int g -> g
+    int h -> h
+    int i -> i
+    int j -> j
+    int k -> k
+    int l -> l
+    int m -> m
+    int n -> n
+    int o -> o
+    int p -> p
+com.bodong.dianjinweb.a.cl -> com.bodong.dianjinweb.a.cl:
+    android.view.animation.AnimationSet a() -> a
+    android.view.animation.AnimationSet b() -> b
+    android.view.animation.AnimationSet c() -> c
+    android.view.animation.AnimationSet d() -> d
+    android.view.animation.AnimationSet a(android.content.Context) -> a
+    android.view.animation.AnimationSet b(android.content.Context) -> b
+    android.view.animation.AnimationSet a(int,int) -> a
+    android.view.animation.AnimationSet b(int,int) -> b
+com.bodong.dianjinweb.a.cm -> com.bodong.dianjinweb.a.cm:
+    boolean a(int,java.lang.String) -> a
+    void a(android.content.Context,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String) -> b
+    java.lang.String a(long) -> a
+    java.lang.String a(float) -> a
+    java.lang.String b(long) -> b
+    int a(java.lang.String) -> a
+    boolean c(android.content.Context,java.lang.String) -> c
+    boolean a(android.content.Context,java.lang.String[]) -> a
+    boolean a(android.content.Context) -> a
+com.bodong.dianjinweb.a.cn -> com.bodong.dianjinweb.a.dx:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    android.content.Context c -> c
+    java.lang.Object a(java.lang.Object[]) -> a
+    void a(java.lang.Object,java.lang.String) -> a
+com.bodong.dianjinweb.a.co -> com.bodong.dianjinweb.a.co:
+    char[] a -> a
+    byte[] a(byte[],byte[]) -> a
+    byte[] b(byte[],byte[]) -> b
+    byte[] a(byte[]) -> a
+    javax.crypto.spec.IvParameterSpec b(byte[]) -> b
+    java.lang.String a() -> a
+    java.lang.String a(int) -> a
+com.bodong.dianjinweb.a.cp -> com.bodong.dianjinweb.a.cp:
+    android.content.res.AssetManager a -> a
+    android.graphics.drawable.Drawable a(android.content.Context,java.lang.String) -> a
+    android.graphics.drawable.Drawable b(android.content.Context,java.lang.String) -> b
+    void a(android.content.Context,android.view.View,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable,android.graphics.drawable.Drawable) -> a
+    void a(android.content.Context,android.view.View,int,int,int) -> a
+com.bodong.dianjinweb.a.cq -> com.bodong.dianjinweb.a.cq:
+    java.lang.String a(android.content.Context) -> a
+    java.lang.String b(android.content.Context) -> b
+    java.lang.String c(android.content.Context) -> c
+    java.lang.String d(android.content.Context) -> d
+    java.lang.String e(android.content.Context) -> e
+    boolean a(java.lang.String) -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void f(android.content.Context) -> f
+com.bodong.dianjinweb.a.cr -> com.bodong.dianjinweb.a.cr:
+    java.lang.String a(byte[]) -> a
+    java.lang.String a(byte[],java.lang.String) -> a
+com.bodong.dianjinweb.a.cs -> com.bodong.dianjinweb.a.cs:
+    android.graphics.drawable.Drawable a(android.content.Context,java.lang.String) -> a
+    android.graphics.Bitmap a(java.io.InputStream) -> a
+    android.graphics.Bitmap b(android.content.Context,java.lang.String) -> b
+    void a(byte[],android.graphics.Rect) -> a
+    byte[] a(android.graphics.Bitmap) -> a
+    void a(android.graphics.Bitmap,byte[]) -> a
+    void a(java.io.OutputStream,int) -> a
+    void a(byte[],int,int) -> a
+    int a(byte[],int) -> a
+com.bodong.dianjinweb.a.ct -> com.bodong.dianjinweb.a.ct:
+    void a(java.lang.String,java.lang.Object) -> a
+    java.lang.Object a(java.lang.String) -> a
+com.bodong.dianjinweb.a.cu -> com.bodong.dianjinweb.a.cu:
+    float a -> a
+    float b -> b
+    float c -> c
+    float d -> d
+    float e -> e
+    boolean f -> f
+    android.graphics.Camera g -> g
+    void initialize(int,int,int,int) -> initialize
+    void applyTransformation(float,android.view.animation.Transformation) -> applyTransformation
+com.bodong.dianjinweb.a.cv -> com.bodong.dianjinweb.a.cv:
+    android.widget.Toast a -> a
+    void a(android.content.Context) -> a
+    void a(android.content.Context,java.lang.String) -> a
+com.bodong.dianjinweb.a.cw -> com.bodong.dianjinweb.a.cw:
+    int a(android.content.Context,float) -> a
+com.bodong.dianjinweb.a.cx -> com.bodong.dianjinweb.a.cx:
+    com.bodong.dianjinweb.view.CustomProgressBar a -> a
+    void run() -> run
+com.bodong.dianjinweb.a.cy -> com.bodong.dianjinweb.a.cy:
+    com.bodong.dianjinweb.view.FloatView a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.bodong.dianjinweb.a.cz -> com.bodong.dianjinweb.a.cz:
+    com.bodong.dianjinweb.view.FloatView a -> a
+    void a(android.graphics.Bitmap,java.lang.String) -> a
+com.bodong.dianjinweb.a.d -> com.bodong.dianjinweb.a.dz:
+    void handleMessage(android.os.Message) -> handleMessage
+com.bodong.dianjinweb.a.da -> com.bodong.dianjinweb.a.da:
+    com.bodong.dianjinweb.view.FloatView a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.db -> com.bodong.dianjinweb.a.db:
+    com.bodong.dianjinweb.view.StateButton a -> a
+    int[] b -> b
+    int[] c -> c
+    void onClick(android.view.View) -> onClick
+    int[] a() -> a
+    int[] b() -> b
+com.bodong.dianjinweb.a.dc -> com.bodong.dianjinweb.a.dc:
+    com.bodong.dianjinweb.web.BaseActivity a -> a
+    void onClick(android.view.View) -> onClick
+com.bodong.dianjinweb.a.dd -> com.bodong.dianjinweb.a.dd:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    boolean onCreateWindow(android.webkit.WebView,boolean,boolean,android.os.Message) -> onCreateWindow
+    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
+com.bodong.dianjinweb.a.de -> com.bodong.dianjinweb.a.de:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+com.bodong.dianjinweb.a.df -> com.bodong.dianjinweb.a.df:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+com.bodong.dianjinweb.a.dg -> com.bodong.dianjinweb.a.dg:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    void a(java.util.List) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.dh -> com.bodong.dianjinweb.a.dh:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    java.lang.String b -> b
+    void a(java.util.List) -> a
+    void a(com.bodong.dianjinweb.a.cd) -> a
+    void a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.di -> com.bodong.dianjinweb.a.di:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    void a(com.bodong.dianjinweb.a.w) -> a
+com.bodong.dianjinweb.a.dj -> com.bodong.dianjinweb.a.dj:
+    com.bodong.dianjinweb.web.DianjinWebAcitivity a -> a
+    void a(com.bodong.dianjinweb.a.do,java.lang.String) -> a
+com.bodong.dianjinweb.a.dk -> com.bodong.dianjinweb.a.dk:
+    com.bodong.dianjinweb.a.dk SHOW_LIST -> SHOW_LIST
+    com.bodong.dianjinweb.a.dk GET_BALANCE -> GET_BALANCE
+    com.bodong.dianjinweb.a.dk DOWNLOAD_APP -> DOWNLOAD_APP
+    com.bodong.dianjinweb.a.dk INSTALL_APP -> INSTALL_APP
+    com.bodong.dianjinweb.a.dk OPEN_APP -> OPEN_APP
+    com.bodong.dianjinweb.a.dk DOWNLOAD_MANAGER -> DOWNLOAD_MANAGER
+    com.bodong.dianjinweb.a.dk SHOW_DETAIL -> SHOW_DETAIL
+    com.bodong.dianjinweb.a.dk REFRESH -> REFRESH
+    com.bodong.dianjinweb.a.dk BACK -> BACK
+    com.bodong.dianjinweb.a.dk REFRESH_DETAIL -> REFRESH_DETAIL
+    com.bodong.dianjinweb.a.dk UNKONW -> UNKONW
+    int act -> act
+    java.lang.Class parser -> parser
+    com.bodong.dianjinweb.a.dk[] ENUM$VALUES -> ENUM$VALUES
+    com.bodong.dianjinweb.a.dk get(int) -> get
+    com.bodong.dianjinweb.a.dk[] values() -> values
+    com.bodong.dianjinweb.a.dk valueOf(java.lang.String) -> valueOf
+com.bodong.dianjinweb.a.dl -> com.bodong.dianjinweb.a.dl:
+    int a -> a
+    java.lang.String b -> b
+com.bodong.dianjinweb.a.dm -> com.bodong.dianjinweb.a.dm:
+    int a -> a
+    int b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+com.bodong.dianjinweb.a.dn -> com.bodong.dianjinweb.a.dn:
+    int a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.Long f -> f
+    int g -> g
+    int h -> h
+    java.lang.String i -> i
+    int j -> j
+    java.lang.String k -> k
+    com.bodong.dianjinweb.a.w a(com.bodong.dianjinweb.a.dn) -> a
+com.bodong.dianjinweb.a.do -> com.bodong.dianjinweb.a.do:
+    int a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+com.bodong.dianjinweb.a.dp -> com.bodong.dianjinweb.a.dp:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.dm) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.dq -> com.bodong.dianjinweb.a.dq:
+    int a(android.content.Context,java.lang.String,java.lang.String,int) -> a
+    boolean a(java.lang.String) -> a
+com.bodong.dianjinweb.a.dr -> com.bodong.dianjinweb.a.dr:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.ay) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.ds -> com.bodong.dianjinweb.a.ds:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.ay) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.dt -> com.bodong.dianjinweb.a.ek:
+    com.bodong.dianjinweb.a.ds a -> a
+    com.bodong.dianjinweb.a.ec$a b -> b
+    com.bodong.dianjinweb.a.do c -> c
+    android.content.Context d -> d
+    void a(long) -> a
+com.bodong.dianjinweb.a.du -> com.bodong.dianjinweb.a.du:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.ay) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.dv -> com.bodong.dianjinweb.a.dv:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.ay) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.dw -> com.bodong.dianjinweb.a.dw:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.dn) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.dx -> com.bodong.dianjinweb.a.eo:
+    com.bodong.dianjinweb.a.dw a -> a
+    com.bodong.dianjinweb.a.w b -> b
+    com.bodong.dianjinweb.a.ec$a c -> c
+    com.bodong.dianjinweb.a.dn d -> d
+    android.content.Context e -> e
+    com.bodong.dianjinweb.a.do f -> f
+    void a(com.bodong.dianjinweb.a.w) -> a
+com.bodong.dianjinweb.a.dy -> com.bodong.dianjinweb.a.dy:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.dl) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.dz -> com.bodong.dianjinweb.a.fi:
+    com.bodong.dianjinweb.a.dy a -> a
+    com.bodong.dianjinweb.a.w b -> b
+    com.bodong.dianjinweb.a.ec$a c -> c
+    com.bodong.dianjinweb.a.do d -> d
+    org.json.JSONObject e -> e
+    void a(com.bodong.dianjinweb.a.w) -> a
+com.bodong.dianjinweb.a.e -> com.bodong.dianjinweb.a.e:
+    boolean a(com.bodong.dianjinweb.a.n) -> a
+    org.apache.http.impl.client.DefaultHttpClient a() -> a
+    boolean a(java.lang.String,byte[],boolean) -> a
+com.bodong.dianjinweb.a.ea -> com.bodong.dianjinweb.a.ea:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.util.List) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.eb -> com.bodong.dianjinweb.a.eb:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.dl) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.ec -> com.bodong.dianjinweb.a.ec:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a) -> a
+    java.lang.Object a(com.bodong.dianjinweb.a.do) -> a
+com.bodong.dianjinweb.a.ec$a -> com.bodong.dianjinweb.a.ec$a:
+    void a(com.bodong.dianjinweb.a.do,java.lang.String) -> a
+com.bodong.dianjinweb.a.ed -> com.bodong.dianjinweb.a.ed:
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,com.bodong.dianjinweb.a.ay) -> a
+    void a(android.content.Context,com.bodong.dianjinweb.a.do,com.bodong.dianjinweb.a.ec$a,java.lang.Object) -> a
+com.bodong.dianjinweb.a.ee -> com.bodong.dianjinweb.a.ee:
+    int a -> a
+    int b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    android.os.Handler f -> f
+    java.util.concurrent.ConcurrentLinkedQueue g -> g
+    java.util.LinkedList h -> h
+    java.util.concurrent.ConcurrentLinkedQueue i -> i
+    int j -> j
+    boolean k -> k
+    void a(int) -> a
+    boolean a(java.lang.String) -> a
+    boolean a(java.lang.String,java.lang.Object) -> a
+    boolean b(java.lang.String) -> b
+    java.lang.String a(java.lang.String,boolean,java.lang.Object[]) -> a
+    java.lang.String a(java.lang.String,java.lang.Object[]) -> a
+    java.lang.String a() -> a
+    void a(com.bodong.dianjinweb.a.ee$b) -> a
+    void b(com.bodong.dianjinweb.a.ee$b) -> b
+    void e() -> e
+    com.bodong.dianjinweb.a.ee$b e(java.lang.String) -> e
+    void a(int,java.lang.String,java.lang.Object[]) -> a
+    void b(java.lang.Object[]) -> b
+    void a(java.lang.String[]) -> a
+    void b() -> b
+    void c(java.lang.String) -> c
+    void c() -> c
+    void d() -> d
+    java.lang.Object a(java.lang.Object[]) -> a
+    void d(java.lang.String) -> d
+    void b(java.lang.String,java.lang.Object[]) -> b
+    void c(java.lang.String,java.lang.Object[]) -> c
+    void c(java.lang.Object[]) -> c
+    void d(java.lang.Object[]) -> d
+    void a(java.lang.Object,java.lang.String) -> a
+    void a(com.bodong.dianjinweb.a.ex) -> a
+    java.lang.String a(java.lang.String,com.bodong.dianjinweb.a.ee$b,java.lang.Object[]) -> a
+    java.lang.String a(java.lang.String,boolean,com.bodong.dianjinweb.a.ee$b,java.lang.Object[]) -> a
+    com.bodong.dianjinweb.a.ex f(java.lang.String) -> f
+    java.lang.String c(com.bodong.dianjinweb.a.ee$b) -> c
+    void a(com.bodong.dianjinweb.a.ee$a) -> a
+    void a(com.bodong.dianjinweb.a.ee,com.bodong.dianjinweb.a.ee$b) -> a
+    java.lang.String a(com.bodong.dianjinweb.a.ee,java.lang.String,com.bodong.dianjinweb.a.ee$b,java.lang.Object[]) -> a
+    android.os.Handler a(com.bodong.dianjinweb.a.ee) -> a
+    java.lang.String b(com.bodong.dianjinweb.a.ee) -> b
+    java.util.concurrent.ConcurrentLinkedQueue c(com.bodong.dianjinweb.a.ee) -> c
+    void a(com.bodong.dianjinweb.a.ee,com.bodong.dianjinweb.a.ee$a) -> a
+com.bodong.dianjinweb.a.ee$a -> com.bodong.dianjinweb.a.fj:
+    java.lang.Object b -> b
+    com.bodong.dianjinweb.a.ee$b c -> c
+    boolean d -> d
+    java.lang.String e -> e
+    java.lang.Object[] f -> f
+    boolean g -> g
+    com.bodong.dianjinweb.a.ee a -> a
+    boolean a() -> a
+    java.lang.Object b() -> b
+    java.lang.String c() -> c
+    java.lang.Object[] d() -> d
+    java.lang.Object a(java.lang.Object[]) -> a
+    void a(java.lang.String) -> a
+    void a(java.lang.Object,com.bodong.dianjinweb.a.ex) -> a
+    com.bodong.dianjinweb.a.ee$b a(com.bodong.dianjinweb.a.ee$a) -> a
+    java.lang.String b(com.bodong.dianjinweb.a.ee$a) -> b
+    boolean c(com.bodong.dianjinweb.a.ee$a) -> c
+    java.lang.Object[] d(com.bodong.dianjinweb.a.ee$a) -> d
+    void a(com.bodong.dianjinweb.a.ee$a,com.bodong.dianjinweb.a.ee$b) -> a
+    void a(com.bodong.dianjinweb.a.ee$a,boolean) -> a
+    void a(com.bodong.dianjinweb.a.ee$a,java.lang.String) -> a
+    void a(com.bodong.dianjinweb.a.ee$a,java.lang.Object[]) -> a
+com.bodong.dianjinweb.a.ee$b -> com.bodong.dianjinweb.a.fk:
+    int b -> b
+    int c -> c
+    java.lang.Object[] d -> d
+    java.lang.String e -> e
+    int f -> f
+    boolean g -> g
+    boolean h -> h
+    com.bodong.dianjinweb.a.ee a -> a
+    void a(int) -> a
+    void a() -> a
+    void run() -> run
+    void b() -> b
+    java.lang.String a(com.bodong.dianjinweb.a.ee$b) -> a
+    int b(com.bodong.dianjinweb.a.ee$b) -> b
+com.bodong.dianjinweb.a.ee$c -> com.bodong.dianjinweb.a.fl:
+    com.bodong.dianjinweb.a.ee a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.bodong.dianjinweb.a.ef -> com.bodong.dianjinweb.a.ef:
+    java.lang.String a -> a
+    int b -> b
+    java.lang.String c -> c
+    boolean d -> d
+    boolean e -> e
+    boolean f -> f
+    float g -> g
+    float h -> h
+    long i -> i
+    int j -> j
+    android.app.Notification k -> k
+com.bodong.dianjinweb.a.eg -> com.bodong.dianjinweb.a.eg:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    int d -> d
+    java.lang.String e -> e
+    int f -> f
+    int g -> g
+    com.bodong.dianjinweb.a.eg h -> h
+    com.bodong.dianjinweb.a.eg$b i -> i
+    java.util.LinkedList j -> j
+    java.util.HashMap k -> k
+    java.lang.String l -> l
+    boolean m -> m
+    int n -> n
+    int o -> o
+    com.bodong.dianjinweb.a.er p -> p
+    boolean q -> q
+    java.text.DecimalFormat r -> r
+    int s -> s
+    int t -> t
+    boolean u -> u
+    int v -> v
+    java.lang.String w -> w
+    boolean x -> x
+    long y -> y
+    com.bodong.dianjinweb.a.eg a() -> a
+    void a(java.lang.String) -> a
+    java.lang.String a(android.content.Context) -> a
+    void b(android.content.Context) -> b
+    void a(int) -> a
+    boolean a(android.content.Context,java.lang.String) -> a
+    void a(com.bodong.dianjinweb.a.eh) -> a
+    void b(com.bodong.dianjinweb.a.eh) -> b
+    void a(android.content.Context,java.lang.String,java.lang.String,boolean) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,boolean,boolean,boolean) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,boolean,boolean,boolean,int) -> a
+    void a(android.content.Context,java.lang.String[]) -> a
+    void b(android.content.Context,java.lang.String[]) -> b
+    void a(android.content.Context,int,java.lang.String[]) -> a
+    void a(android.content.Context,int,java.lang.String) -> a
+    void c(android.content.Context,java.lang.String[]) -> c
+    boolean a(android.net.NetworkInfo) -> a
+    android.net.NetworkInfo c(android.content.Context) -> c
+    java.lang.String b(android.content.Context,java.lang.String) -> b
+    boolean c(android.content.Context,java.lang.String) -> c
+    void d(android.content.Context) -> d
+    boolean b() -> b
+    void e(android.content.Context) -> e
+    void d(android.content.Context,java.lang.String) -> d
+    android.app.Notification e(android.content.Context,java.lang.String) -> e
+    boolean a(android.content.Context,java.lang.String,long,boolean) -> a
+    android.app.Notification a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,long,float) -> a
+    int a(android.view.ViewGroup) -> a
+    void a(android.content.Context,android.app.Notification,int) -> a
+    void a(android.content.Context,int) -> a
+    com.bodong.dianjinweb.a.ef b(java.lang.String) -> b
+    java.lang.String a(com.bodong.dianjinweb.a.eg) -> a
+    void a(com.bodong.dianjinweb.a.eg,android.content.Context,int) -> a
+    boolean a(com.bodong.dianjinweb.a.eg,android.content.Context,java.lang.String,long,boolean) -> a
+    void a(com.bodong.dianjinweb.a.eg,android.content.Context,java.lang.String) -> a
+    java.util.HashMap b(com.bodong.dianjinweb.a.eg) -> b
+    int c(com.bodong.dianjinweb.a.eg) -> c
+    int d(com.bodong.dianjinweb.a.eg) -> d
+    android.net.NetworkInfo a(com.bodong.dianjinweb.a.eg,android.content.Context) -> a
+    boolean e(com.bodong.dianjinweb.a.eg) -> e
+    boolean a(com.bodong.dianjinweb.a.eg,android.net.NetworkInfo) -> a
+    java.util.LinkedList f(com.bodong.dianjinweb.a.eg) -> f
+    com.bodong.dianjinweb.a.ef a(com.bodong.dianjinweb.a.eg,java.lang.String) -> a
+    boolean g(com.bodong.dianjinweb.a.eg) -> g
+    int h(com.bodong.dianjinweb.a.eg) -> h
+    boolean i(com.bodong.dianjinweb.a.eg) -> i
+com.bodong.dianjinweb.a.eg$a -> com.bodong.dianjinweb.a.fm:
+    long a -> a
+    boolean b -> b
+    com.bodong.dianjinweb.a.eg c -> c
+com.bodong.dianjinweb.a.eg$b -> com.bodong.dianjinweb.a.fn:
+    int b -> b
+    int c -> c
+    int d -> d
+    int e -> e
+    int f -> f
+    int g -> g
+    com.bodong.dianjinweb.a.eg a -> a
+    java.lang.Object a(java.lang.Object[]) -> a
+    void a(org.apache.http.impl.client.DefaultHttpClient,java.io.InputStream,com.bodong.dianjinweb.a.eg$c) -> a
+    void c(java.lang.Object[]) -> c
+    void d(java.lang.Object[]) -> d
+    void e(java.lang.String) -> e
+    void f(java.lang.String) -> f
+    void b(java.lang.String,java.lang.Object[]) -> b
+    void c(java.lang.String,java.lang.Object[]) -> c
+    com.bodong.dianjinweb.a.eg$a a(java.io.InputStream,com.bodong.dianjinweb.a.eg$c,long,android.content.Context,java.lang.String) -> a
+    boolean a(android.content.Context,java.lang.String,long,long,long,long) -> a
+    long e() -> e
+    long f() -> f
+    org.apache.http.impl.client.DefaultHttpClient g() -> g
+com.bodong.dianjinweb.a.eg$c -> com.bodong.dianjinweb.a.fo:
+    java.io.File b -> b
+    com.bodong.dianjinweb.a.eg a -> a
+    void write(byte[],int,int) -> write
+    boolean a() -> a
+    java.io.File b() -> b
+com.bodong.dianjinweb.a.eh -> com.bodong.dianjinweb.a.eh:
+    void a(android.content.Context,java.lang.String) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String,java.lang.String) -> b
+    void d(android.content.Context,java.lang.String,java.lang.String) -> d
+    void a(android.content.Context,java.lang.String,int) -> a
+    void a(java.lang.String,boolean) -> a
+    void a(java.lang.String) -> a
+    void a() -> a
+    void a(android.content.Context,java.lang.String,long,java.lang.String) -> a
+    void c(android.content.Context,java.lang.String,java.lang.String) -> c
+    void a(android.content.Context,java.lang.String,android.app.Notification) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,android.app.Notification) -> a
+    void a(android.content.Context,java.lang.String,int,java.lang.String) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,float,long,long,float,long) -> a
+    void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+com.bodong.dianjinweb.a.ei -> com.bodong.dianjinweb.a.ei:
+    android.graphics.Bitmap a(byte[],boolean,int,int) -> a
+    int a(android.graphics.BitmapFactory$Options,int,int) -> a
+    int b(android.graphics.BitmapFactory$Options,int,int) -> b
+com.bodong.dianjinweb.a.ej -> com.bodong.dianjinweb.a.ej:
+    int a -> a
+    int b -> b
+    javax.net.ssl.HostnameVerifier c -> c
+    android.graphics.Bitmap a(java.lang.String,int,int) -> a
+    android.graphics.Bitmap a(java.lang.String,int,int,int) -> a
+    byte[] a(java.lang.String) -> a
+    byte[] a(java.io.InputStream) -> a
+    void a() -> a
+    boolean b() -> b
+com.bodong.dianjinweb.a.ej$a -> com.bodong.dianjinweb.a.fp:
+    long skip(long) -> skip
+com.bodong.dianjinweb.a.ek -> com.bodong.dianjinweb.a.fq:
+    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+com.bodong.dianjinweb.a.el -> com.bodong.dianjinweb.a.el:
+    java.lang.String e -> e
+    java.lang.String a -> a
+    long b -> b
+    long c -> c
+    double d -> d
+    com.bodong.dianjinweb.a.el f -> f
+    boolean g -> g
+    java.lang.String h -> h
+    com.bodong.dianjinweb.a.el a() -> a
+    android.graphics.Bitmap a(java.lang.String,int,int) -> a
+    byte[] a(java.lang.String) -> a
+    void a(byte[],java.lang.String) -> a
+    void a(java.lang.String,android.graphics.Bitmap) -> a
+    java.io.File b(java.lang.String) -> b
+    java.io.File a(java.lang.String,java.lang.String) -> a
+    java.io.File b(java.lang.String,java.lang.String) -> b
+    void c(java.lang.String) -> c
+    java.lang.String d(java.lang.String) -> d
+    java.lang.String b() -> b
+    void a(android.content.Context,java.lang.String) -> a
+    long c() -> c
+    boolean d() -> d
+com.bodong.dianjinweb.a.em -> com.bodong.dianjinweb.a.em:
+    com.bodong.dianjinweb.a.el a -> a
+    com.bodong.dianjinweb.a.em$a b -> b
+    boolean c -> c
+    int d -> d
+    com.bodong.dianjinweb.a.en e -> e
+    boolean f -> f
+    int g -> g
+    android.graphics.drawable.Drawable h -> h
+    boolean i -> i
+    com.bodong.dianjinweb.a.em j -> j
+    com.bodong.dianjinweb.a.em a() -> a
+    void a(android.content.Context,java.lang.String) -> a
+    android.graphics.Bitmap a(java.lang.String,boolean) -> a
+    android.graphics.Bitmap a(java.lang.String,boolean,int,int) -> a
+    void a(java.lang.String,boolean,com.bodong.dianjinweb.a.em$b) -> a
+    void a(java.lang.String,boolean,boolean,int,int,com.bodong.dianjinweb.a.em$b) -> a
+    void a(java.lang.String,android.widget.ImageView) -> a
+    void a(java.lang.String,android.widget.ImageView,boolean,boolean,int,int) -> a
+    void a(android.widget.ImageView,android.graphics.Bitmap) -> a
+    void a(com.bodong.dianjinweb.a.em,android.widget.ImageView,android.graphics.Bitmap) -> a
+com.bodong.dianjinweb.a.em$a -> com.bodong.dianjinweb.a.fr:
+    com.bodong.dianjinweb.a.em a -> a
+    java.lang.Object a(java.lang.Object[]) -> a
+    void d(java.lang.Object[]) -> d
+com.bodong.dianjinweb.a.em$b -> com.bodong.dianjinweb.a.em$b:
+    void a(android.graphics.Bitmap,java.lang.String) -> a
+com.bodong.dianjinweb.a.en -> com.bodong.dianjinweb.a.en:
+    int a -> a
+    com.bodong.dianjinweb.a.en b -> b
+    com.bodong.dianjinweb.a.ep c -> c
+    com.bodong.dianjinweb.a.en a() -> a
+    void b() -> b
+    void a(java.lang.String,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap a(java.lang.String) -> a
+com.bodong.dianjinweb.a.eo -> com.bodong.dianjinweb.a.fs:
+    com.bodong.dianjinweb.a.en a -> a
+    int a(java.lang.String,android.graphics.Bitmap) -> a
+    int a(java.lang.Object,java.lang.Object) -> a
+com.bodong.dianjinweb.a.ep -> com.bodong.dianjinweb.a.ep:
+    java.util.LinkedHashMap a -> a
+    int b -> b
+    int c -> c
+    int d -> d
+    int e -> e
+    int f -> f
+    int g -> g
+    int h -> h
+    java.lang.Object a(java.lang.Object) -> a
+    java.lang.Object b(java.lang.Object,java.lang.Object) -> b
+    void a(int) -> a
+    void a(boolean,java.lang.Object,java.lang.Object,java.lang.Object) -> a
+    java.lang.Object b(java.lang.Object) -> b
+    int c(java.lang.Object,java.lang.Object) -> c
+    int a(java.lang.Object,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.eq -> com.bodong.dianjinweb.a.eq:
+    boolean a -> a
+    android.widget.TextView b -> b
+    android.widget.ScrollView c -> c
+    void a(java.lang.Object,java.lang.Object[]) -> a
+    void b(java.lang.Object,java.lang.Object[]) -> b
+    void c(java.lang.Object,java.lang.Object[]) -> c
+    void a(java.lang.Object,java.lang.Throwable,java.lang.Object[]) -> a
+    void d(java.lang.Object,java.lang.Object[]) -> d
+    java.lang.String a(java.lang.Object[]) -> a
+    android.widget.TextView a() -> a
+    android.widget.ScrollView b() -> b
+com.bodong.dianjinweb.a.eq$a -> com.bodong.dianjinweb.a.ft:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    void run() -> run
+com.bodong.dianjinweb.a.er -> com.bodong.dianjinweb.a.er:
+    boolean a(android.content.Context,java.lang.String,java.util.List,java.lang.Object[]) -> a
+com.bodong.dianjinweb.a.es -> com.bodong.dianjinweb.a.es:
+    boolean a(android.content.Context,java.lang.String,java.util.List,java.lang.Object[]) -> a
+    java.util.Map a(java.lang.Object) -> a
+com.bodong.dianjinweb.a.et -> com.bodong.dianjinweb.a.et:
+    void a(java.lang.Object,com.bodong.dianjinweb.a.ex) -> a
+    void a(java.lang.String) -> a
+com.bodong.dianjinweb.a.eu -> com.bodong.dianjinweb.a.eu:
+    void a(com.bodong.dianjinweb.a.ex,int) -> a
+com.bodong.dianjinweb.a.ev -> com.bodong.dianjinweb.a.ev:
+    java.lang.Object a(java.lang.Object[]) -> a
+    void a(java.lang.String) -> a
+    void a(java.lang.Object,com.bodong.dianjinweb.a.ex) -> a
+com.bodong.dianjinweb.a.ew -> com.bodong.dianjinweb.a.ew:
+    void a(com.bodong.dianjinweb.a.ex) -> a
+com.bodong.dianjinweb.a.ex -> com.bodong.dianjinweb.a.ex:
+    com.bodong.dianjinweb.a.ev a -> a
+    long b -> b
+    java.lang.Object[] c -> c
+    int d -> d
+    java.lang.Object e -> e
+    com.bodong.dianjinweb.a.eu f -> f
+    void run() -> run
+    void a() -> a
+    void b() -> b
+    void a(java.lang.Object) -> a
+    int c() -> c
+    long d() -> d
+    com.bodong.dianjinweb.a.ev e() -> e
+    void f() -> f
+    void a(com.bodong.dianjinweb.a.ev,java.lang.Object[]) -> a
+com.bodong.dianjinweb.a.ey -> com.bodong.dianjinweb.a.ey:
+    java.lang.String a -> a
+    com.bodong.dianjinweb.a.ey b -> b
+    int c -> c
+    int d -> d
+    java.util.LinkedList e -> e
+    int f -> f
+    com.bodong.dianjinweb.a.ey$a g -> g
+    java.util.LinkedList h -> h
+    com.bodong.dianjinweb.a.ey a() -> a
+    com.bodong.dianjinweb.a.ey$b a(java.lang.String) -> a
+    void b(java.lang.String) -> b
+    com.bodong.dianjinweb.a.ex a(java.lang.String,com.bodong.dianjinweb.a.ev,com.bodong.dianjinweb.a.ew,java.lang.Object[]) -> a
+    com.bodong.dianjinweb.a.ex b() -> b
+    void a(com.bodong.dianjinweb.a.ex,int) -> a
+    boolean a(com.bodong.dianjinweb.a.ex) -> a
+    void a(com.bodong.dianjinweb.a.ey,com.bodong.dianjinweb.a.ex,int) -> a
+com.bodong.dianjinweb.a.ey$a -> com.bodong.dianjinweb.a.fu:
+    com.bodong.dianjinweb.a.ey a -> a
+    void a(com.bodong.dianjinweb.a.ex,int) -> a
+com.bodong.dianjinweb.a.ey$b -> com.bodong.dianjinweb.a.ey$b:
+    com.bodong.dianjinweb.a.ev a -> a
+    java.lang.Object[] b -> b
+    java.lang.String c -> c
+    com.bodong.dianjinweb.a.ew d -> d
+    com.bodong.dianjinweb.a.ey e -> e
+com.bodong.dianjinweb.a.ez -> com.bodong.dianjinweb.a.ez:
+    int a -> a
+    com.bodong.dianjinweb.a.ez a(int) -> a
+    org.apache.http.params.HttpParams createHttpParams() -> createHttpParams
+    org.apache.http.conn.ClientConnectionManager createClientConnectionManager() -> createClientConnectionManager
+    void a() -> a
+com.bodong.dianjinweb.a.f -> com.bodong.dianjinweb.a.f:
+    android.database.sqlite.SQLiteDatabase a -> a
+    int b -> b
+    void a(android.content.Context) -> a
+    void c() -> c
+    void a() -> a
+    long a(java.lang.String,long,long,int) -> a
+    void a(java.lang.String) -> a
+    void a(java.lang.String,int) -> a
+    void b(java.lang.String) -> b
+    java.util.List b() -> b
+com.bodong.dianjinweb.a.fa -> com.bodong.dianjinweb.a.fa:
+    com.bodong.dianjinweb.a.fa a -> a
+    java.lang.Class b -> b
+    java.lang.String c -> c
+    int d -> d
+    int e -> e
+    com.bodong.dianjinweb.a.fa a() -> a
+    com.bodong.dianjinweb.a.fc a(android.content.Context,java.lang.String,com.bodong.dianjinweb.a.fb,java.lang.Class) -> a
+    com.bodong.dianjinweb.a.fc a(android.content.Context,java.lang.String,com.bodong.dianjinweb.a.fb,java.lang.String,java.lang.Class) -> a
+    com.bodong.dianjinweb.a.fc a(java.lang.String,com.bodong.dianjinweb.a.fb,java.lang.String,com.bodong.dianjinweb.a.fd,java.lang.Class) -> a
+    android.net.NetworkInfo a(android.content.Context) -> a
+com.bodong.dianjinweb.a.fb -> com.bodong.dianjinweb.a.fb:
+    java.util.List a -> a
+    org.apache.http.HttpEntity b -> b
+    java.util.List a() -> a
+    void a(org.apache.http.HttpEntity) -> a
+    org.apache.http.HttpEntity b() -> b
+com.bodong.dianjinweb.a.fc -> com.bodong.dianjinweb.a.fc:
+    int a -> a
+    java.util.List b -> b
+    byte[] c -> c
+    void a() -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void a(byte[]) -> a
+    byte[] b() -> b
+    void a(int) -> a
+com.bodong.dianjinweb.a.fd -> com.bodong.dianjinweb.a.fd:
+    void a() -> a
+    void b() -> b
+com.bodong.dianjinweb.a.fe -> com.bodong.dianjinweb.a.fe:
+    long serialVersionUID -> serialVersionUID
+com.bodong.dianjinweb.a.ff -> com.bodong.dianjinweb.a.ff:
+    long serialVersionUID -> serialVersionUID
+com.bodong.dianjinweb.a.fg -> com.bodong.dianjinweb.a.fg:
+    java.lang.String a() -> a
+com.bodong.dianjinweb.a.fh -> com.bodong.dianjinweb.a.fh:
+    boolean a(java.lang.Class) -> a
+    boolean b(java.lang.Class) -> b
+    java.lang.String a(java.lang.Object) -> a
+    java.lang.String a(java.lang.Object,java.lang.Class) -> a
+    java.lang.String b(java.lang.Object) -> b
+    java.lang.Object a(java.lang.String,java.lang.reflect.Type) -> a
+    java.lang.Object a(java.lang.String,java.lang.Class) -> a
+    java.lang.Object a(org.json.JSONObject,java.lang.Class) -> a
+    void a(java.lang.Object,java.lang.reflect.Field,org.json.JSONObject) -> a
+    java.util.List a(org.json.JSONArray,java.lang.Class,java.lang.reflect.Type) -> a
+    java.lang.Object a(org.json.JSONArray,java.lang.Class) -> a
+    java.util.List c(java.lang.Class) -> c
+    void a(java.util.List,java.lang.Class) -> a
+com.bodong.dianjinweb.a.fh$a -> com.bodong.dianjinweb.a.fh$a:
+    java.lang.Class b -> b
+    java.lang.reflect.Type c -> c
+    java.lang.reflect.Type a() -> a
+    java.lang.reflect.Type a(java.lang.Class) -> a
+    java.lang.Class a(java.lang.reflect.Type) -> a
+com.bodong.dianjinweb.a.g -> com.bodong.dianjinweb.a.g:
+com.bodong.dianjinweb.a.g$a -> com.bodong.dianjinweb.a.fv:
+com.bodong.dianjinweb.a.g$b -> com.bodong.dianjinweb.a.fw:
+    java.lang.String[] a -> a
+    void a(android.database.sqlite.SQLiteDatabase) -> a
+com.bodong.dianjinweb.a.h -> com.bodong.dianjinweb.a.h:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    long d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    boolean g -> g
+    long h -> h
+    long i -> i
+    int a() -> a
+    void a(com.bodong.dianjinweb.a.p) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.i -> com.bodong.dianjinweb.a.i:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    com.bodong.dianjinweb.a.k c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    int i -> i
+    java.lang.String j -> j
+    int k -> k
+    java.lang.String l -> l
+    boolean m -> m
+    java.lang.String n -> n
+    java.lang.String o -> o
+    java.lang.String p -> p
+    java.lang.String q -> q
+    long r -> r
+    java.lang.String s -> s
+    java.lang.String t -> t
+    java.lang.String u -> u
+    int v -> v
+    int w -> w
+    int a() -> a
+    void a(com.bodong.dianjinweb.a.p) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.j -> com.bodong.dianjinweb.a.j:
+    java.lang.String a -> a
+    int b -> b
+    float c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    int g -> g
+    int h -> h
+    int i -> i
+    int j -> j
+    int k -> k
+    int l -> l
+    int m -> m
+    float n -> n
+    float o -> o
+    int p -> p
+    java.lang.String q -> q
+    java.lang.String r -> r
+    java.lang.String s -> s
+    java.lang.String t -> t
+    java.lang.String u -> u
+    java.lang.String v -> v
+    java.lang.String w -> w
+    boolean x -> x
+    java.lang.String y -> y
+    java.lang.String z -> z
+    java.lang.String A -> A
+    java.lang.String B -> B
+    void a(com.bodong.dianjinweb.a.p) -> a
+    int a() -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.k -> com.bodong.dianjinweb.a.k:
+    double a -> a
+    double b -> b
+    int a() -> a
+    void a(com.bodong.dianjinweb.a.p) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.l -> com.bodong.dianjinweb.a.l:
+    java.lang.String a -> a
+    long b -> b
+    int c -> c
+    int d -> d
+    int e -> e
+    int f -> f
+    int a() -> a
+    void a(com.bodong.dianjinweb.a.p) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.m -> com.bodong.dianjinweb.a.m:
+    int a -> a
+    com.bodong.dianjinweb.a.j b -> b
+    com.bodong.dianjinweb.a.l c -> c
+    void a(com.bodong.dianjinweb.a.p) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.n -> com.bodong.dianjinweb.a.n:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    com.bodong.dianjinweb.a.h c -> c
+    com.bodong.dianjinweb.a.i d -> d
+    java.util.List e -> e
+    int a() -> a
+    void a(com.bodong.dianjinweb.a.p) -> a
+    java.lang.String toString() -> toString
+com.bodong.dianjinweb.a.o -> com.bodong.dianjinweb.a.o:
+    void a(com.bodong.dianjinweb.a.p) -> a
+com.bodong.dianjinweb.a.p -> com.bodong.dianjinweb.a.p:
+    byte[] a -> a
+    java.io.OutputStream b -> b
+    com.bodong.dianjinweb.a.p a(boolean) -> a
+    int b(boolean) -> b
+    com.bodong.dianjinweb.a.p a(double) -> a
+    int b(double) -> b
+    com.bodong.dianjinweb.a.p a(float) -> a
+    int b(float) -> b
+    com.bodong.dianjinweb.a.p a(int) -> a
+    com.bodong.dianjinweb.a.p a(long) -> a
+    com.bodong.dianjinweb.a.p a(com.bodong.dianjinweb.a.o) -> a
+    com.bodong.dianjinweb.a.p a(java.lang.String) -> a
+    com.bodong.dianjinweb.a.p b(int) -> b
+    int c(int) -> c
+    com.bodong.dianjinweb.a.p c(double) -> c
+    com.bodong.dianjinweb.a.p a() -> a
+    com.bodong.dianjinweb.a.p c(float) -> c
+    com.bodong.dianjinweb.a.p d(int) -> d
+    com.bodong.dianjinweb.a.p b(long) -> b
+    int c(long) -> c
+    com.bodong.dianjinweb.a.p b() -> b
+    com.bodong.dianjinweb.a.p e(int) -> e
+    com.bodong.dianjinweb.a.p a(byte[]) -> a
+    com.bodong.dianjinweb.a.p b(java.lang.String) -> b
+    int c(java.lang.String) -> c
+    com.bodong.dianjinweb.a.p c() -> c
+com.bodong.dianjinweb.a.q -> com.bodong.dianjinweb.a.q:
+    java.lang.String a(com.bodong.dianjinweb.a.n) -> a
+    java.lang.String a(com.bodong.dianjinweb.a.m,com.bodong.dianjinweb.a.n) -> a
+com.bodong.dianjinweb.a.r -> com.bodong.dianjinweb.a.r:
+    com.bodong.dianjinweb.a.h a() -> a
+    com.bodong.dianjinweb.a.i b() -> b
+com.bodong.dianjinweb.a.s -> com.bodong.dianjinweb.a.s:
+    java.lang.StringBuffer a -> a
+    void a(java.lang.String[]) -> a
+com.bodong.dianjinweb.a.t -> com.bodong.dianjinweb.a.t:
+    java.lang.String a -> a
+    android.telephony.TelephonyManager b -> b
+    void A() -> A
+    boolean a() -> a
+    boolean b() -> b
+    boolean c() -> c
+    org.apache.http.HttpHost d() -> d
+    java.lang.String e() -> e
+    java.lang.String B() -> B
+    java.lang.String C() -> C
+    java.lang.String D() -> D
+    java.lang.String b(java.lang.String) -> b
+    java.lang.String E() -> E
+    void c(java.lang.String) -> c
+    void d(java.lang.String) -> d
+    void e(java.lang.String) -> e
+    void a(java.lang.String,java.lang.String) -> a
+    void f(java.lang.String) -> f
+    java.lang.String F() -> F
+    java.lang.String f() -> f
+    java.lang.String g() -> g
+    java.lang.String G() -> G
+    java.lang.String h() -> h
+    java.lang.String i() -> i
+    java.lang.String j() -> j
+    java.lang.String k() -> k
+    java.lang.String l() -> l
+    java.lang.String m() -> m
+    java.lang.String n() -> n
+    java.lang.String H() -> H
+    java.lang.String o() -> o
+    boolean a(java.lang.String) -> a
+    java.lang.String p() -> p
+    java.lang.String q() -> q
+    long r() -> r
+    int s() -> s
+    java.lang.String t() -> t
+    java.lang.String u() -> u
+    java.lang.String v() -> v
+    java.lang.String w() -> w
+    com.bodong.dianjinweb.a.j x() -> x
+    java.lang.String[] I() -> I
+    java.lang.String[] J() -> J
+    int g(java.lang.String) -> g
+    int[] K() -> K
+    int[] y() -> y
+    int z() -> z
+    void a(com.bodong.dianjinweb.a.j) -> a
+    java.lang.String a(android.database.Cursor,java.lang.String) -> a
+    java.lang.String h(java.lang.String) -> h
+com.bodong.dianjinweb.a.t$a -> com.bodong.dianjinweb.a.fx:
+    long a(android.content.Context) -> a
+com.bodong.dianjinweb.a.u -> com.bodong.dianjinweb.a.u:
+    boolean a(android.content.Context) -> a
+    void a(boolean) -> a
+    java.lang.String b(android.content.Context) -> b
+    void a(android.content.Context,java.lang.String) -> a
+    long c(android.content.Context) -> c
+    void a(android.content.Context,long) -> a
+    long d(android.content.Context) -> d
+    void b(android.content.Context,long) -> b
+    void c(android.content.Context,long) -> c
+    long e(android.content.Context) -> e
+    long f(android.content.Context) -> f
+    void d(android.content.Context,long) -> d
+    void a(java.lang.String,long) -> a
+    void a(java.lang.String,java.lang.String) -> a
+    long b(java.lang.String,long) -> b
+    java.lang.String b(java.lang.String,java.lang.String) -> b
+    android.content.SharedPreferences a() -> a
+com.bodong.dianjinweb.a.v -> com.bodong.dianjinweb.a.fy:
+    java.lang.Class b -> b
+    java.lang.reflect.Method a -> a
+    boolean a() -> a
+com.bodong.dianjinweb.a.w -> com.bodong.dianjinweb.a.w:
+    long serialVersionUID -> serialVersionUID
+    int appId -> appId
+    java.lang.String packageName -> packageName
+    java.lang.String name -> name
+    java.lang.String serverAppVersion -> serverAppVersion
+    java.lang.String downloadUrl -> downloadUrl
+    java.lang.String iconUrl -> iconUrl
+    java.lang.String localVersion -> localVersion
+    int localVersionCode -> localVersionCode
+    com.bodong.dianjinweb.a.y state -> state
+    int percentage -> percentage
+    long appSize -> appSize
+    long completedCount -> completedCount
+    float speed -> speed
+    long remainTime -> remainTime
+    java.lang.String filePath -> filePath
+    int errorCode -> errorCode
+    java.lang.String detail -> detail
+    long awardCount -> awardCount
+    int isOpen -> isOpen
+    java.lang.String makeFileName() -> makeFileName
+    boolean equals(java.lang.Object) -> equals
+com.bodong.dianjinweb.a.x -> com.bodong.dianjinweb.a.x:
+    com.bodong.dianjinweb.a.x a -> a
+    java.util.List b -> b
+    java.util.List c -> c
+    java.util.List d -> d
+    com.bodong.dianjinweb.a.x a() -> a
+    void b() -> b
+    void a(android.content.Context) -> a
+    boolean a(android.content.Context,java.lang.String) -> a
+    java.util.List b(android.content.Context) -> b
+    com.bodong.dianjinweb.a.w b(android.content.Context,java.lang.String) -> b
+    com.bodong.dianjinweb.a.w a(android.content.Context,java.lang.String,boolean) -> a
+    boolean c(android.content.Context,java.lang.String) -> c
+    boolean a(java.lang.String) -> a
+    com.bodong.dianjinweb.a.w a(android.content.Context,android.content.pm.ApplicationInfo) -> a
+    com.bodong.dianjinweb.a.w a(android.content.Context,android.content.pm.ApplicationInfo,boolean) -> a
+    boolean a(android.content.pm.ApplicationInfo) -> a
+    boolean b(android.content.pm.ApplicationInfo) -> b
+    boolean c(android.content.pm.ApplicationInfo) -> c
+com.bodong.dianjinweb.a.x$a -> com.bodong.dianjinweb.a.x$a:
+    void a(com.bodong.dianjinweb.a.w) -> a
+    void b(com.bodong.dianjinweb.a.w) -> b
+    void a() -> a
+com.bodong.dianjinweb.a.y -> com.bodong.dianjinweb.a.y:
+    com.bodong.dianjinweb.a.y DISPLAY -> DISPLAY
+    com.bodong.dianjinweb.a.y PAUSE -> PAUSE
+    com.bodong.dianjinweb.a.y DOWNLOADING -> DOWNLOADING
+    com.bodong.dianjinweb.a.y FAILED -> FAILED
+    com.bodong.dianjinweb.a.y COMPLETED -> COMPLETED
+    com.bodong.dianjinweb.a.y INSTALLED -> INSTALLED
+    com.bodong.dianjinweb.a.y UPDATEABLE -> UPDATEABLE
+    com.bodong.dianjinweb.a.y WAITTING -> WAITTING
+    com.bodong.dianjinweb.a.y UNKOWN -> UNKOWN
+    int code -> code
+    java.lang.String stateName -> stateName
+    java.lang.String stateLable -> stateLable
+    java.lang.String drawbleRes -> drawbleRes
+    boolean clickable -> clickable
+    com.bodong.dianjinweb.a.y[] ENUM$VALUES -> ENUM$VALUES
+    com.bodong.dianjinweb.a.y getEnum(int) -> getEnum
+    java.lang.String toString() -> toString
+    com.bodong.dianjinweb.a.y[] values() -> values
+    com.bodong.dianjinweb.a.y valueOf(java.lang.String) -> valueOf
+com.bodong.dianjinweb.a.z -> com.bodong.dianjinweb.a.z:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    com.bodong.dianjinweb.a.z c -> c
+    java.util.Properties d -> d
+    com.bodong.dianjinweb.a.z a() -> a
+    boolean a(android.content.Context,long) -> a
+    long a(android.content.Context) -> a
+    boolean c(android.content.Context) -> c
+    java.util.Properties b() -> b
+    void b(android.content.Context) -> b
+    java.lang.String d(android.content.Context) -> d
+    byte[] c() -> c
+    java.lang.String a(java.lang.String) -> a
+    byte[] a(int,long) -> a
+com.bodong.dianjinweb.app.AppStateReceiver -> com.bodong.dianjinweb.app.AppStateReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.bodong.dianjinweb.banner.BaseBanner -> com.bodong.dianjinweb.banner.BaseBanner:
+    int HANDLER_MSG_NEXT -> HANDLER_MSG_NEXT
+    long DEFAULT_DURATION -> DEFAULT_DURATION
+    boolean mIsRegister -> mIsRegister
+    long mDuration -> mDuration
+    com.bodong.dianjinweb.view.DianJinFlipper mViewFlipper -> mViewFlipper
+    com.bodong.dianjinweb.banner.BaseBanner$a mConfigrationStateReceiver -> mConfigrationStateReceiver
+    android.os.Handler mHandler -> mHandler
+    void setBannerInterval(int) -> setBannerInterval
+    void showNext() -> showNext
+    void onResize() -> onResize
+    void stopBanner() -> stopBanner
+    void pauseBanner() -> pauseBanner
+    void resumeBanner() -> resumeBanner
+    void resumeBannerDelay() -> resumeBannerDelay
+    void startBanner() -> startBanner
+    void onWindowVisibilityChanged(int) -> onWindowVisibilityChanged
+    void registerConfigrationStateReceiver(android.content.Context) -> registerConfigrationStateReceiver
+    void unregisterConfigrationStateReceiver(android.content.Context) -> unregisterConfigrationStateReceiver
+    android.os.Handler access$0(com.bodong.dianjinweb.banner.BaseBanner) -> access$0
+com.bodong.dianjinweb.banner.BaseBanner$a -> com.bodong.dianjinweb.banner.a:
+    com.bodong.dianjinweb.banner.BaseBanner a -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.bodong.dianjinweb.banner.DianJinBanner -> com.bodong.dianjinweb.banner.DianJinBanner:
+    int MIN_LIMIT_TIME -> MIN_LIMIT_TIME
+    com.bodong.dianjinweb.banner.DianJinBannerView mFirstBannerView -> mFirstBannerView
+    com.bodong.dianjinweb.banner.DianJinBannerView mSecondBannerView -> mSecondBannerView
+    int mCurrentIndex -> mCurrentIndex
+    boolean mIsFirstViewShow -> mIsFirstViewShow
+    java.util.ArrayList mBannerList -> mBannerList
+    java.lang.String TAG -> TAG
+    int[] $SWITCH_TABLE$com$bodong$dianjinweb$banner$DianJinBanner$AnimationType -> $SWITCH_TABLE$com$bodong$dianjinweb$banner$DianJinBanner$AnimationType
+    void init() -> init
+    void startDetailActivity(java.lang.String) -> startDetailActivity
+    void bindData(com.bodong.dianjinweb.banner.DianJinBannerView,com.bodong.dianjinweb.a.ax) -> bindData
+    void showNext() -> showNext
+    boolean isTheLastAd() -> isTheLastAd
+    void replayAdList() -> replayAdList
+    void playNext() -> playNext
+    com.bodong.dianjinweb.banner.DianJinBannerView getNextBannerView() -> getNextBannerView
+    void removeInstalledAd(java.util.List) -> removeInstalledAd
+    void requestData() -> requestData
+    void setAnimationType(com.bodong.dianjinweb.banner.DianJinBanner$AnimationType) -> setAnimationType
+    void onResize() -> onResize
+    com.bodong.dianjinweb.banner.DianJinBannerView access$0(com.bodong.dianjinweb.banner.DianJinBanner) -> access$0
+    void access$1(com.bodong.dianjinweb.banner.DianJinBanner,java.lang.String) -> access$1
+    com.bodong.dianjinweb.banner.DianJinBannerView access$2(com.bodong.dianjinweb.banner.DianJinBanner) -> access$2
+    boolean access$3(com.bodong.dianjinweb.banner.DianJinBanner) -> access$3
+    void access$4(com.bodong.dianjinweb.banner.DianJinBanner,boolean) -> access$4
+    void access$5(com.bodong.dianjinweb.banner.DianJinBanner,java.util.List) -> access$5
+    void access$6(com.bodong.dianjinweb.banner.DianJinBanner,java.util.ArrayList) -> access$6
+    java.lang.String access$7(com.bodong.dianjinweb.banner.DianJinBanner) -> access$7
+    java.util.ArrayList access$8(com.bodong.dianjinweb.banner.DianJinBanner) -> access$8
+    void access$9(com.bodong.dianjinweb.banner.DianJinBanner,int) -> access$9
+    int[] $SWITCH_TABLE$com$bodong$dianjinweb$banner$DianJinBanner$AnimationType() -> $SWITCH_TABLE$com$bodong$dianjinweb$banner$DianJinBanner$AnimationType
+com.bodong.dianjinweb.banner.DianJinBanner$AnimationType -> com.bodong.dianjinweb.banner.DianJinBanner$AnimationType:
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType ANIMATION_PUSHLEFT -> ANIMATION_PUSHLEFT
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType ANIMATION_PUSHUP -> ANIMATION_PUSHUP
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType ANIMATION_FADE -> ANIMATION_FADE
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType ANIMATION_HYPERSPACE -> ANIMATION_HYPERSPACE
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType[] ENUM$VALUES -> ENUM$VALUES
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType[] values() -> values
+    com.bodong.dianjinweb.banner.DianJinBanner$AnimationType valueOf(java.lang.String) -> valueOf
+com.bodong.dianjinweb.banner.DianJinBannerView -> com.bodong.dianjinweb.banner.DianJinBannerView:
+    android.view.WindowManager c -> c
+    int d -> d
+    int e -> e
+    android.widget.ImageView f -> f
+    android.widget.ImageView a -> a
+    android.graphics.drawable.Drawable g -> g
+    java.lang.String b -> b
+    void a() -> a
+    void b() -> b
+    android.widget.ImageView c() -> c
+    android.widget.RelativeLayout$LayoutParams d() -> d
+    android.widget.ImageView e() -> e
+    android.widget.RelativeLayout$LayoutParams f() -> f
+    void setImage(java.lang.String) -> setImage
+    void setImage(java.lang.String,com.bodong.dianjinweb.a.em$b) -> setImage
+    void setImage(android.graphics.drawable.Drawable) -> setImage
+    void setCloseListener(android.view.View$OnClickListener) -> setCloseListener
+    void setADClickListener(android.view.View$OnClickListener) -> setADClickListener
+    int getBannerWidth() -> getBannerWidth
+    int getBannerHeight() -> getBannerHeight
+com.bodong.dianjinweb.banner.DianJinMiniBanner -> com.bodong.dianjinweb.banner.DianJinMiniBanner:
+    int MIN_LIMIT_TIME -> MIN_LIMIT_TIME
+    android.graphics.drawable.Drawable mDefaultIcon -> mDefaultIcon
+    com.bodong.dianjinweb.a.ak mFirstBannerView -> mFirstBannerView
+    com.bodong.dianjinweb.a.ak mSecondBannerView -> mSecondBannerView
+    boolean mIsFirstViewShow -> mIsFirstViewShow
+    int mCurrentIndex -> mCurrentIndex
+    java.util.List mBannerList -> mBannerList
+    void setBackgroundColor(int) -> setBackgroundColor
+    void setTextColor(int) -> setTextColor
+    void init(android.content.Context) -> init
+    void bindData(com.bodong.dianjinweb.a.ak,com.bodong.dianjinweb.a.bc) -> bindData
+    void startDetailActivity(java.lang.String) -> startDetailActivity
+    void showNext() -> showNext
+    boolean isTheLastAd() -> isTheLastAd
+    void replayAdList() -> replayAdList
+    void playNext() -> playNext
+    com.bodong.dianjinweb.a.ak getCurrentBannerView() -> getCurrentBannerView
+    void removeInstalledAd(java.util.List) -> removeInstalledAd
+    void requestData() -> requestData
+    void onResize() -> onResize
+    com.bodong.dianjinweb.a.ak access$0(com.bodong.dianjinweb.banner.DianJinMiniBanner) -> access$0
+    void access$1(com.bodong.dianjinweb.banner.DianJinMiniBanner,java.lang.String) -> access$1
+    com.bodong.dianjinweb.a.ak access$2(com.bodong.dianjinweb.banner.DianJinMiniBanner) -> access$2
+    void access$3(com.bodong.dianjinweb.banner.DianJinMiniBanner,java.util.List) -> access$3
+    void access$4(com.bodong.dianjinweb.banner.DianJinMiniBanner,java.util.List) -> access$4
+    java.util.List access$5(com.bodong.dianjinweb.banner.DianJinMiniBanner) -> access$5
+    void access$6(com.bodong.dianjinweb.banner.DianJinMiniBanner,int) -> access$6
+    void access$7(com.bodong.dianjinweb.banner.DianJinMiniBanner,com.bodong.dianjinweb.a.ak,com.bodong.dianjinweb.a.bc) -> access$7
+com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager -> com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager:
+    android.widget.LinearLayout a -> a
+    android.widget.ExpandableListView b -> b
+    com.bodong.dianjinweb.a.at c -> c
+    int d -> d
+    android.widget.TextView e -> e
+    com.bodong.dianjinweb.a.am$b f -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void a() -> a
+    android.widget.ExpandableListView b() -> b
+    android.widget.LinearLayout$LayoutParams c() -> c
+    void a(android.content.Context) -> a
+    void d() -> d
+    void e() -> e
+    void onDestroy() -> onDestroy
+    android.widget.RelativeLayout f() -> f
+    android.widget.LinearLayout$LayoutParams g() -> g
+    android.widget.ImageView h() -> h
+    android.widget.RelativeLayout$LayoutParams i() -> i
+    android.widget.TextView j() -> j
+    android.widget.RelativeLayout$LayoutParams k() -> k
+    android.widget.TextView l() -> l
+    android.widget.RelativeLayout$LayoutParams m() -> m
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    android.widget.ExpandableListView a(com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager) -> a
+    com.bodong.dianjinweb.a.at b(com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager) -> b
+    void c(com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager) -> c
+    android.widget.TextView d(com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager) -> d
+com.bodong.dianjinweb.listener.AppActiveListener -> com.bodong.dianjinweb.listener.AppActiveListener:
+    void onSuccess(long) -> onSuccess
+    void onError(int,java.lang.String) -> onError
+com.bodong.dianjinweb.listener.ChannelListener -> com.bodong.dianjinweb.listener.ChannelListener:
+    void onSuccess(boolean) -> onSuccess
+    void onError(int,java.lang.String) -> onError
+com.bodong.dianjinweb.listener.ConsumeListener -> com.bodong.dianjinweb.listener.ConsumeListener:
+    void onSuccess() -> onSuccess
+    void onError(int,java.lang.String) -> onError
+com.bodong.dianjinweb.service.DianJinService -> com.bodong.dianjinweb.service.DianJinService:
+    com.bodong.dianjinweb.app.AppStateReceiver a -> a
+    boolean b -> b
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    void onDestroy() -> onDestroy
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+com.bodong.dianjinweb.view.CustomProgressBar -> com.bodong.dianjinweb.view.CustomProgressBar:
+    int a -> a
+    float b -> b
+    long c -> c
+    android.widget.ImageView d -> d
+    android.widget.ImageView e -> e
+    int f -> f
+    void setBackgroundDrawable(android.graphics.drawable.Drawable) -> setBackgroundDrawable
+    void setProgressDrawable(android.graphics.drawable.Drawable) -> setProgressDrawable
+    void onMeasure(int,int) -> onMeasure
+    void setMax(int) -> setMax
+    void setProgress(float) -> setProgress
+    float getProgress() -> getProgress
+    void a() -> a
+    void b() -> b
+    void a(com.bodong.dianjinweb.view.CustomProgressBar) -> a
+com.bodong.dianjinweb.view.DianJinFlipper -> com.bodong.dianjinweb.view.DianJinFlipper:
+    void onDetachedFromWindow() -> onDetachedFromWindow
+com.bodong.dianjinweb.view.FloatView -> com.bodong.dianjinweb.view.FloatView:
+    com.bodong.dianjinweb.view.FloatView a -> a
+    android.view.WindowManager b -> b
+    android.view.WindowManager$LayoutParams c -> c
+    android.graphics.Point d -> d
+    android.graphics.Point e -> e
+    android.graphics.Point f -> f
+    boolean g -> g
+    java.util.Timer h -> h
+    java.util.TimerTask i -> i
+    android.os.Handler j -> j
+    com.bodong.dianjinweb.view.FloatView a(android.content.Context) -> a
+    void setToken(android.os.IBinder) -> setToken
+    void setEnable(boolean) -> setEnable
+    void a() -> a
+    void b() -> b
+    void c() -> c
+    void d() -> d
+    void setPosition(int,int) -> setPosition
+    void b(android.content.Context) -> b
+    java.lang.String getIconUrl() -> getIconUrl
+    android.graphics.Point e() -> e
+    void f() -> f
+    int getScreenWidth() -> getScreenWidth
+    int getScreenHeight() -> getScreenHeight
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void g() -> g
+    void h() -> h
+    void i() -> i
+    android.os.Handler a(com.bodong.dianjinweb.view.FloatView) -> a
+com.bodong.dianjinweb.view.FloatView$a -> com.bodong.dianjinweb.view.a:
+    com.bodong.dianjinweb.view.FloatView a -> a
+    void run() -> run
+com.bodong.dianjinweb.view.ItemView -> com.bodong.dianjinweb.view.ItemView:
+    android.widget.ImageView a -> a
+    com.bodong.dianjinweb.view.StateButton b -> b
+    android.widget.TextView c -> c
+    com.bodong.dianjinweb.view.CustomProgressBar d -> d
+    android.widget.TextView e -> e
+    android.widget.TextView f -> f
+    android.graphics.drawable.Drawable g -> g
+    void a() -> a
+    void a(com.bodong.dianjinweb.a.w) -> a
+    void setUpView(com.bodong.dianjinweb.a.w,int,boolean) -> setUpView
+    android.widget.ImageView getIconImageView() -> getIconImageView
+    com.bodong.dianjinweb.view.StateButton getStateButton() -> getStateButton
+    android.widget.TextView getNameTextView() -> getNameTextView
+    com.bodong.dianjinweb.view.CustomProgressBar getProgressBar() -> getProgressBar
+    android.widget.TextView getAppMsgTextView() -> getAppMsgTextView
+    android.widget.TextView getDownloadMsgTextView() -> getDownloadMsgTextView
+    android.widget.ImageView b() -> b
+    com.bodong.dianjinweb.view.StateButton c() -> c
+    android.widget.RelativeLayout d() -> d
+    android.widget.TextView e() -> e
+    com.bodong.dianjinweb.view.CustomProgressBar f() -> f
+    android.widget.RelativeLayout g() -> g
+    android.view.View h() -> h
+com.bodong.dianjinweb.view.StateButton -> com.bodong.dianjinweb.view.StateButton:
+    android.view.View$OnClickListener a -> a
+    android.widget.TextView b -> b
+    android.widget.ImageView c -> c
+    com.bodong.dianjinweb.a.w d -> d
+    com.bodong.dianjinweb.view.StateButton$a e -> e
+    void setOuterOnClickListener(android.view.View$OnClickListener) -> setOuterOnClickListener
+    void a(com.bodong.dianjinweb.a.w) -> a
+    com.bodong.dianjinweb.view.StateButton$a getState() -> getState
+    com.bodong.dianjinweb.a.w getAppInfo() -> getAppInfo
+    void setButtonState(com.bodong.dianjinweb.view.StateButton$a) -> setButtonState
+    android.view.View$OnClickListener a() -> a
+    com.bodong.dianjinweb.view.StateButton$a a(com.bodong.dianjinweb.view.StateButton) -> a
+    com.bodong.dianjinweb.a.w b(com.bodong.dianjinweb.view.StateButton) -> b
+    android.view.View$OnClickListener c(com.bodong.dianjinweb.view.StateButton) -> c
+com.bodong.dianjinweb.view.StateButton$a -> com.bodong.dianjinweb.view.StateButton$a:
+    com.bodong.dianjinweb.view.StateButton$a NORMAL -> NORMAL
+    com.bodong.dianjinweb.view.StateButton$a CANCEL -> CANCEL
+    com.bodong.dianjinweb.view.StateButton$a DELETE -> DELETE
+    int code -> code
+    java.lang.String stateName -> stateName
+    java.lang.String drawbleRes -> drawbleRes
+    com.bodong.dianjinweb.view.StateButton$a[] ENUM$VALUES -> ENUM$VALUES
+    com.bodong.dianjinweb.view.StateButton$a[] values() -> values
+    com.bodong.dianjinweb.view.StateButton$a valueOf(java.lang.String) -> valueOf
+com.bodong.dianjinweb.web.BaseActivity -> com.bodong.dianjinweb.web.BaseActivity:
+    android.widget.FrameLayout a -> a
+    android.view.View b -> b
+    android.view.View c -> c
+    boolean d -> d
+    android.view.View$OnClickListener e -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void a() -> a
+    void b() -> b
+    void setContentView(int) -> setContentView
+    void setContentView(android.view.View) -> setContentView
+    void setContentView(android.view.View,android.view.ViewGroup$LayoutParams) -> setContentView
+    void setProgressView(android.view.View) -> setProgressView
+    void a(android.view.View,int) -> a
+    void setLoadFailedView(android.view.View) -> setLoadFailedView
+    void c() -> c
+    void d() -> d
+    void e() -> e
+    void f() -> f
+    void g() -> g
+    android.widget.LinearLayout h() -> h
+    android.widget.TextView i() -> i
+    android.widget.ImageView j() -> j
+    android.widget.LinearLayout k() -> k
+    android.widget.LinearLayout$LayoutParams l() -> l
+    android.widget.RelativeLayout$LayoutParams m() -> m
+    android.widget.TextView n() -> n
+    android.widget.RelativeLayout$LayoutParams o() -> o
+    android.widget.RelativeLayout p() -> p
+    android.widget.LinearLayout q() -> q
+    android.widget.FrameLayout$LayoutParams r() -> r
+    android.widget.LinearLayout s() -> s
+    android.widget.LinearLayout$LayoutParams t() -> t
+    android.widget.LinearLayout$LayoutParams u() -> u
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+com.bodong.dianjinweb.web.DianjinWebAcitivity -> com.bodong.dianjinweb.web.DianjinWebAcitivity:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    android.webkit.WebView c -> c
+    android.webkit.WebView d -> d
+    android.widget.RelativeLayout e -> e
+    boolean f -> f
+    com.bodong.dianjinweb.web.DianjinWebAcitivity$a g -> g
+    com.bodong.dianjinweb.a.am$b h -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    void h() -> h
+    void a(android.webkit.WebView) -> a
+    android.webkit.WebViewClient i() -> i
+    void b(android.webkit.WebView) -> b
+    void a(android.webkit.WebView,java.lang.String) -> a
+    void b(android.webkit.WebView,java.lang.String) -> b
+    void g() -> g
+    void j() -> j
+    void k() -> k
+    void a(java.lang.String) -> a
+    void l() -> l
+    void b(java.lang.String) -> b
+    void m() -> m
+    void c(java.lang.String) -> c
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onDestroy() -> onDestroy
+    void n() -> n
+    boolean d(java.lang.String) -> d
+    void a(com.bodong.dianjinweb.web.DianjinWebAcitivity,android.webkit.WebView) -> a
+    android.webkit.WebViewClient a(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> a
+    android.webkit.WebView b(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> b
+    void a(com.bodong.dianjinweb.web.DianjinWebAcitivity,java.lang.String) -> a
+    com.bodong.dianjinweb.web.DianjinWebAcitivity$a c(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> c
+    boolean b(com.bodong.dianjinweb.web.DianjinWebAcitivity,java.lang.String) -> b
+    void b(com.bodong.dianjinweb.web.DianjinWebAcitivity,android.webkit.WebView) -> b
+    void a(com.bodong.dianjinweb.web.DianjinWebAcitivity,android.webkit.WebView,java.lang.String) -> a
+    void b(com.bodong.dianjinweb.web.DianjinWebAcitivity,android.webkit.WebView,java.lang.String) -> b
+    void c(com.bodong.dianjinweb.web.DianjinWebAcitivity,java.lang.String) -> c
+    void d(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> d
+    void d(com.bodong.dianjinweb.web.DianjinWebAcitivity,java.lang.String) -> d
+    boolean e(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> e
+    void f(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> f
+    java.lang.String g(com.bodong.dianjinweb.web.DianjinWebAcitivity) -> g
+    void e(com.bodong.dianjinweb.web.DianjinWebAcitivity,java.lang.String) -> e
+com.bodong.dianjinweb.web.DianjinWebAcitivity$a -> com.bodong.dianjinweb.web.DianjinWebAcitivity$a:
+    android.webkit.WebView a -> a
+    com.bodong.dianjinweb.web.DianjinWebAcitivity b -> b
+    java.lang.Object a(java.lang.Object[]) -> a
+    void a(java.lang.Object,java.lang.String) -> a
+    int e(java.lang.String) -> e
+com.example.dianjinwebreward.MainActivity -> com.example.dianjinwebreward.MainActivity:
+    android.widget.TextView mBalanceTextView -> a
+    android.widget.TextView mChannelTextView -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void initView() -> a
+    android.widget.TextView access$0(com.example.dianjinwebreward.MainActivity) -> a
+    android.widget.TextView access$1(com.example.dianjinwebreward.MainActivity) -> b
+com.example.dianjinwebreward.MainActivity$1 -> com.example.dianjinwebreward.a:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onSuccess(boolean) -> onSuccess
+    void onError(int,java.lang.String) -> onError
+com.example.dianjinwebreward.MainActivity$2 -> com.example.dianjinwebreward.b:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onSuccess(long) -> onSuccess
+    void onError(int,java.lang.String) -> onError
+com.example.dianjinwebreward.MainActivity$3 -> com.example.dianjinwebreward.c:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.dianjinwebreward.MainActivity$4 -> com.example.dianjinwebreward.d:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.dianjinwebreward.MainActivity$5 -> com.example.dianjinwebreward.e:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+    com.example.dianjinwebreward.MainActivity access$0(com.example.dianjinwebreward.MainActivity$5) -> a
+com.example.dianjinwebreward.MainActivity$5$1 -> com.example.dianjinwebreward.f:
+    com.example.dianjinwebreward.MainActivity$5 this$1 -> a
+    void onSuccess() -> onSuccess
+    void onError(int,java.lang.String) -> onError
+com.example.dianjinwebreward.MainActivity$6 -> com.example.dianjinwebreward.g:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.dianjinwebreward.MainActivity$7 -> com.example.dianjinwebreward.h:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.dianjinwebreward.MainActivity$8 -> com.example.dianjinwebreward.i:
+    com.example.dianjinwebreward.MainActivity this$0 -> a
+    com.bodong.dianjinweb.banner.DianJinBanner val$banner -> b
+    void onClick(android.view.View) -> onClick

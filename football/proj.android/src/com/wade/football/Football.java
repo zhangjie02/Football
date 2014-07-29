@@ -24,6 +24,7 @@ THE SOFTWARE.
 package com.wade.football;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.cocos2dx.lib.Cocos2dxLuaJavaBridge;
 import org.cocos2dx.utils.PSNetwork;
 
 import android.app.AlertDialog;
@@ -32,10 +33,11 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.bodong.dianjinweb.DianJinPlatform;
-import com.bodong.dianjinweb.banner.DianJinBanner;
-import com.example.dianjinwebnoreward.MainActivity;
+import com.bodong.dianjinweb.banner.DianJinMiniBanner;
+import com.bodong.dianjinweb.listener.AppActiveListener;
 
 public class Football extends Cocos2dxActivity {
 
@@ -55,11 +57,73 @@ public class Football extends Cocos2dxActivity {
 				FrameLayout.LayoutParams.WRAP_CONTENT);
 		layoutParams.gravity = Gravity.TOP;
 //		AdView adView = new AdView(this, AdSize.FIT_SCREEN);
-		DianJinBanner adView = new DianJinBanner(this);
+		DianJinMiniBanner adView = new DianJinMiniBanner(this);
 		this.addContentView(adView, layoutParams);
 		adView.startBanner();
 		DianJinPlatform.hideFloatView(this);
+		
+		DianJinPlatform.setAppActivedListener(new AppActiveListener() {
+
+			@Override
+			public void onSuccess(long reward) {
+				Toast.makeText(instance, "激活成功，奖励金额为：" + reward,
+						Toast.LENGTH_SHORT).show();
+				instance.runOnUiThread(new Runnable() {
+					public void run() {
+						instance.onResume();
+					}
+				});
+				instance.runOnGLThread(new Runnable() {
+					@Override
+					public void run() {
+						System.out.println("addLf one");
+						Cocos2dxLuaJavaBridge
+								.callLuaGlobalFunctionWithString(
+										"addLf", "one");
+					}
+				});
+			}
+
+			@Override
+			public void onError(int errorCode, String errorMessage) {
+				switch (errorCode) {
+				case DianJinPlatform.DIANJIN_NET_ERROR:// 网络不稳定
+					Toast.makeText(instance, errorMessage,
+							Toast.LENGTH_SHORT).show();
+					break;
+				case DianJinPlatform.DIANJIN_DUPLICATE_ACTIVATION:// 重复激活
+					Toast.makeText(instance, errorMessage,
+							Toast.LENGTH_SHORT).show();
+					break;
+
+				case DianJinPlatform.DIANJIN_ADVERTSING_EXPIRED:// 应用已下架
+					Toast.makeText(instance, errorMessage,
+							Toast.LENGTH_SHORT).show();
+					break;
+
+				case DianJinPlatform.DIANJIN_ACTIVATION_FAILURE:// 激活失败
+					Toast.makeText(instance, errorMessage,
+							Toast.LENGTH_SHORT).show();
+					break;
+
+				default:
+					break;
+				}
+			}
+		});
 	}
+	
+	public static void showTip(final String str){
+		instance.runOnUiThread(new Runnable() {
+			public void run() {
+				Toast.makeText(instance,str,
+				Toast.LENGTH_SHORT).show();
+			}
+		});
+		
+	}
+
+	
 
 //	/**
 //	 * 初始化安全支付sdk

@@ -1,0 +1,2 @@
+1. DianJinWebReward.apk: 调用点金平台SDK部分接口效果的Demo的安装包。
+2. DianJinWebReward: Demo源码。注意：该例子仅用于展示如何调用点金平台SDK部分接口的方法，各个接口的详细用法请查看doc目录下《点金广告平台SDK使用手册20131022.pdf》。

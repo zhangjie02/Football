@@ -48,7 +48,7 @@ function PlayLevelScene:ctor(levelIndex)
     self.rep2 = CCRepeatForever:create(action2)
 
     self.prop_sp:runAction(self.rep1)
-    self.prop_sp:setVisible(false)
+    -- self.prop_sp:setVisible(false)
 
     self.prop_sp2 = display.newSprite("lf_01.png",display.left + 270,display.bottom + 130)
     :addTo(self)
@@ -72,7 +72,8 @@ function PlayLevelScene:ctor(levelIndex)
                     self.prop_sp2:setVisible(false)
                 end
             else
-                self:shop_touch()
+                -- self:shop_touch()
+                self:showJavaToast("下载广告中显示的应用或游戏，激活后可获得小手指道具")
             end
             print("dfjkdjfkdjfk")
         end
@@ -94,21 +95,22 @@ function PlayLevelScene:ctor(levelIndex)
                     self.prop_sp2:setVisible(false)
                 end
             else
-                self:shop_touch()
+                -- self:shop_touch()
+                self:showJavaToast("下载广告中显示的应用或游戏，激活后可获得小手指道具")
             end
             print("dfjkdjfkdjfk")
         end
     end)
 
-    self.label1 = ui.newBMFontLabel({
+    PlayLevelScene.label1 = ui.newBMFontLabel({
         text  = ":  "..data.num_lf,
         font  = "UIFont.fnt",
         x     = display.left + 320,
         y     = display.bottom + 120,
         align = ui.TEXT_ALIGN_LEFT,
     })
-    self:addChild(self.label1)
-    self.label1:setVisible(false)
+    self:addChild(PlayLevelScene.label1)
+    -- self.label1:setVisible(false)
 
     -- create menu
     local backButton = ui.newImageMenuItem({
@@ -151,7 +153,7 @@ function PlayLevelScene:ctor(levelIndex)
 end
 
 function PlayLevelScene:update()
-    self.label1:setString(":  "..data.num_lf)
+    PlayLevelScene.label1:setString(":  "..data.num_lf)
     if data.num_lf <= 0 then
         self.board.is_prop = false
     end
@@ -162,17 +164,21 @@ function PlayLevelScene:update()
     -- end
 end
 
+function PlayLevelScene:showJavaToast(__str)
+    local javaClassName = "com/wade/football/Football"
+    local javaMethodName = "showTip"
+    local javaParams = {
+       __str
+    }
+    local javaMethodSig = "(Ljava/lang/String;)V"
+    luaj.callStaticMethod(javaClassName, javaMethodName, javaParams, javaMethodSig)
+end
+
 function PlayLevelScene:shop_touch()
     local net_status = CCNetwork:getInternetConnectionStatus()
     print("net:"..net_status)
     if net_status == kCCNetworkStatusNotReachable then
-        local javaClassName = "com/wade/football/Football"
-        local javaMethodName = "showTip"
-        local javaParams = {
-           "无效的网络连接！"
-        }
-        local javaMethodSig = "(Ljava/lang/String;)V"
-        luaj.callStaticMethod(javaClassName, javaMethodName, javaParams, javaMethodSig)
+        self:showJavaToast("无效的网络连接！")
     else
         self.shopLayer = display.newLayer()
         :addTo(self)
@@ -201,7 +207,8 @@ function PlayLevelScene:onUseProp()
     data.num_lf = data.num_lf -1
     CCUserDefault:sharedUserDefault():setIntegerForKey("num_lf",data.num_lf)
     if data.num_lf == 0 then
-        self:shop_touch()
+        -- self:shop_touch()
+        self:showJavaToast("下载广告中显示的应用或游戏，激活后可获得小手指道具")
     end
 end
 
@@ -217,18 +224,18 @@ function PlayLevelScene:onLevelCompleted()
     dialog:setTouchMode(cc.TOUCH_MODE_ONE_BY_ONE)
     dialog:setTouchEnabled(true)
     dialog:addNodeEventListener(cc.NODE_TOUCH_EVENT,function(event)
-    	if event.name == "began" then
-    		print("wade NODE_TOUCH_EVENT")
-    		return true
-    	end
-    	if event.name == "ended" then
-    		data.cur_level_index = data.cur_level_index+1
-    		if data.cur_level_index > data.record_level_index then
-    			data.record_level_index = data.cur_level_index
-    			CCUserDefault:sharedUserDefault():setIntegerForKey("record_level_index", data.record_level_index)
-    		end
-    		app:playLevel(data.cur_level_index)
-    	end
+        if event.name == "began" then
+            print("wade NODE_TOUCH_EVENT")
+            return true
+        end
+        if event.name == "ended" then
+            data.cur_level_index = data.cur_level_index+1
+            if data.cur_level_index > data.record_level_index then
+                data.record_level_index = data.cur_level_index
+                CCUserDefault:sharedUserDefault():setIntegerForKey("record_level_index", data.record_level_index)
+            end
+            app:playLevel(data.cur_level_index)
+        end
     end)
 end
 
