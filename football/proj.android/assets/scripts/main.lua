@@ -6,6 +6,5 @@ function __G__TRACKBACK__(errorMessage)
     print("----------------------------------------")
 end
 
-CCLuaLoadChunksFromZIP("res/lib/wade.zip")
-
+-- require("app.MyApp").new():run()
 require("app.init")
