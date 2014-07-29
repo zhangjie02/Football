@@ -1,0 +1,10 @@
+com.example.dianjinwebnoreward.BuildConfig
+com.example.dianjinwebnoreward.R
+com.example.dianjinwebnoreward.R$attr
+com.example.dianjinwebnoreward.R$dimen
+com.example.dianjinwebnoreward.R$drawable
+com.example.dianjinwebnoreward.R$id
+com.example.dianjinwebnoreward.R$layout
+com.example.dianjinwebnoreward.R$menu
+com.example.dianjinwebnoreward.R$string
+com.example.dianjinwebnoreward.R$style

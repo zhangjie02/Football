@@ -1,0 +1,18 @@
+# view res/layout/activity_main.xml #generated:103
+-keep class com.bodong.dianjinweb.banner.DianJinBanner { <init>(...); }
+
+# view res/layout/activity_main.xml #generated:20
+-keep class com.bodong.dianjinweb.banner.DianJinMiniBanner { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.bodong.dianjinweb.downloadmanager.DianJinDownloadManager { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.bodong.dianjinweb.service.DianJinService { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.bodong.dianjinweb.web.DianjinWebAcitivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:23
+-keep class com.example.dianjinwebnoreward.MainActivity { <init>(...); }
+

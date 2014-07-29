@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.bodong.dianjinweb.banner.DianJinMiniBanner
+                android:id="@+id/dianJinMiniBanner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </com.bodong.dianjinweb.banner.DianJinMiniBanner>
+
+            
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_web"
+                    android:layout_width="120dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/orange"
+                    android:text="打开推广墙"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_show_banner"
+                    android:layout_width="120dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/blue"
+                    android:text="显示banner"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_show_float"
+                    android:layout_width="120dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/blue"
+                    android:text="显示悬浮窗"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_hide_float"
+                    android:layout_width="120dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/blue"
+                    android:text="隐藏悬浮窗"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/channel_shielded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text=""
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="SDK版本:2.00"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.bodong.dianjinweb.banner.DianJinBanner
+        android:id="@+id/dianJinBaaner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.bodong.dianjinweb.banner.DianJinBanner>
+
+</LinearLayout>
