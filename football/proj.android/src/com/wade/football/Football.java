@@ -64,12 +64,12 @@ public class Football extends Cocos2dxActivity {
 				"7fbd95e41892a95c", false);
 		SpotManager.getInstance(this).loadSpotAds();
 
-//		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
-//				FrameLayout.LayoutParams.MATCH_PARENT,
-//				FrameLayout.LayoutParams.WRAP_CONTENT);
-//		layoutParams.gravity = Gravity.TOP;
-//		AdView adView = new AdView(this, AdSize.FIT_SCREEN);
-//		this.addContentView(adView, layoutParams);
+		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
+				FrameLayout.LayoutParams.MATCH_PARENT,
+				FrameLayout.LayoutParams.WRAP_CONTENT);
+		layoutParams.gravity = Gravity.TOP;
+		AdView adView = new AdView(this, AdSize.FIT_SCREEN);
+		this.addContentView(adView, layoutParams);
 
 		// 初始化sdk参数
 		initSDK();

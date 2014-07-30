@@ -75,7 +75,7 @@
             </intent-filter>
         </receiver>
         <!--如有渠道需求可设置渠道号【整数】（最长支持10位）-->
-        <meta-data android:name="UMIPAY_CHANNEL" android:value="0" />
+        <meta-data android:name="UMIPAY_CHANNEL" android:value="10020" />
     </application>
     
     
