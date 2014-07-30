@@ -150,14 +150,14 @@ function PlayLevelScene:ctor(levelIndex)
         end
     end)
 
-    self.label1 = ui.newBMFontLabel({
+    PlayLevelScene.label1 = ui.newBMFontLabel({
         text  = ":  "..data.num_lf,
         font  = "UIFont.fnt",
         x     = display.left + 320,
         y     = display.bottom + 120,
         align = ui.TEXT_ALIGN_LEFT,
     })
-    self:addChild(self.label1)
+    self:addChild(PlayLevelScene.label1)
 
     -- create menu
     local backButton = ui.newImageMenuItem({
@@ -200,7 +200,7 @@ function PlayLevelScene:ctor(levelIndex)
 end
 
 function PlayLevelScene:update()
-    self.label1:setString(":  "..data.num_lf)
+    PlayLevelScene.label1:setString(":  "..data.num_lf)
     if data.num_lf <= 0 then
         self.board.is_prop = false
     end
