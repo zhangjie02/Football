@@ -49,8 +49,8 @@ public class Football extends Cocos2dxActivity {
 		instance = this;
 		PSNetwork.init(instance);
 		
-		DianJinPlatform.initialize(this, 54271,
-				"c4ec6d364dc6d169a8abc9cdac1d7c3e", 1001);
+		DianJinPlatform.initialize(this, 54282,
+				"121b31dff2b9790c4e94a2ee8eaf0b0e", 1001);
 		
 		FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
 				FrameLayout.LayoutParams.MATCH_PARENT,
